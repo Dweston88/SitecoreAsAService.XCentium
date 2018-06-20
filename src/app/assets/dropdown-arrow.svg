@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="10px" viewBox="0 0 17 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Dropdown-Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Global/Nav-Work" transform="translate(-501.000000, -33.000000)" fill="#35434B" fill-rule="nonzero">
+            <g id="Icons/Dropdown-Arrow" transform="translate(501.000000, 33.000000)">
+                <path d="M15.6430309,0.649895667 C15.8363882,0.452747063 16.1529557,0.449673591 16.3501043,0.643030876 C16.5472529,0.83638816 16.5503264,1.15295573 16.3569691,1.35010433 L8.65377629,9.20434017 L0.652649765,1.47683707 C0.454020791,1.28500083 0.448514191,0.968466239 0.640350428,0.769837265 C0.832186666,0.571208291 1.14872126,0.565701691 1.34735023,0.757537928 L8.63468525,7.79565983 L15.6430309,0.649895667 Z" id="Path-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

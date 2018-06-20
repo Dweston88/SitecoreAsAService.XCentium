@@ -1,5 +1,8 @@
 @import "variables";
 
+// Import Font
+@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+
 // Customized BootStrap styling
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
@@ -8,3 +11,5 @@
 @import "mixins";
 
 @import "src/app/sass/bootstrap/variables/variables";
+
+@import "buttons";

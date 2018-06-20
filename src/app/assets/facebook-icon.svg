@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Global/Footer" transform="translate(-582.000000, -278.000000)" fill="#526774">
+            <path d="M599.5,313 C589.835,313 582,305.165 582,295.5 C582,285.835 589.835,278 599.5,278 C609.165,278 617,285.835 617,295.5 C617,305.165 609.165,313 599.5,313 L599.5,313 Z M601.142,290.588 C601.142,289.734 601.226,289.277 602.504,289.277 L604.209,289.277 L604.209,286.004 L601.479,286.004 C598.2,286.004 597.046,287.592 597.046,290.261 L597.046,292.226 L595.001,292.226 L595.001,295.498 L597.046,295.498 L597.046,304.993 L601.137,304.993 L601.137,295.498 L603.867,295.498 L604.229,292.226 L601.137,292.226 L601.142,290.588 L601.142,290.588 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

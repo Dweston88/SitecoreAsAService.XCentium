@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="20px" viewBox="0 0 34 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Up-Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Global/Footer" transform="translate(-703.000000, -519.000000)" fill="#35434B" fill-rule="nonzero">
+            <g id="Icons/Up-Arrow" transform="translate(703.000000, 519.000000)">
+                <path d="M17.259825,14.8869795 L30.9290926,0.949687 C31.5091645,0.358241189 32.4588672,0.349020774 33.050313,0.929092627 C33.6417588,1.50916448 33.6509792,2.45886719 33.0709074,3.050313 L17.3170981,19.1130205 L0.957949295,3.31332371 C0.362062374,2.737815 0.345542573,1.78821122 0.921051285,1.1923243 C1.49656,0.596437374 2.44616378,0.579917573 3.0420507,1.15542629 L17.259825,14.8869795 Z" id="Path-6" transform="translate(17.000000, 9.806510) scale(1, -1) translate(-17.000000, -9.806510) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

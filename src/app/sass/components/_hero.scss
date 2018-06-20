@@ -13,6 +13,18 @@ $hero-subheading-margin: 0 0 rem-calc(24) 0;
 
 $hero-cta-margin: rem-calc(15) 0 0 0;
 
+.c-hero-center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.c-hero-right{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .c-hero {
     $this: &;
 
@@ -25,6 +37,7 @@ $hero-cta-margin: rem-calc(15) 0 0 0;
 
     &__content {
         padding: $hero-content-padding;
+        max-width: 700px;
 
         & > *:last-child {
             margin-bottom: 0;

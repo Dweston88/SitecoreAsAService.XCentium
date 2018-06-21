@@ -17,12 +17,28 @@ $hero-cta-margin: rem-calc(15) 0 0 0;
     text-align: center;
     display: flex;
     justify-content: center;
+
+    .h-line-mark{
+        &:before{
+            margin: 0px auto 5px auto;
+        }
+    }
 }
 
 .c-hero-right{
     text-align: right;
     display: flex;
     justify-content: flex-end;
+
+    .h-line-mark{
+        position: relative;
+        
+        &:before{
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+    }
 }
 
 .c-hero {

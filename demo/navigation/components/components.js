@@ -5,8 +5,10 @@ import Navbar from 'demo/pages/components/navbar.vue';
 import NewsGrid from 'demo/pages/components/news-grid.vue';
 import Testimonial from 'demo/pages/components/testimonial.vue';
 import VideoPromo from 'demo/pages/components/video-promo.vue';
+import VideoPromoAlt from 'demo/pages/components/video-promo-alt.vue';
 import Footer from 'demo/pages/components/footer.vue';
 import FiftyFiftyImage from 'demo/pages/components/fifty-fifty-image.vue';
+import TextPromo from 'demo/pages/components/text-promo.vue';
 
 const ComponentPages = CreateDynamicNavigation([
     {
@@ -44,6 +46,11 @@ const ComponentPages = CreateDynamicNavigation([
                 component: VideoPromo
             },
             {
+                path: 'video-promo-alt',
+                name: 'Video Promo Alternative',
+                component: VideoPromoAlt
+            },
+            {
                 path: 'footer',
                 name: 'Footer',
                 component: Footer
@@ -52,6 +59,11 @@ const ComponentPages = CreateDynamicNavigation([
                 path: 'fifty-fifty-image',
                 name: 'Fifty Fifty Image',
                 component: FiftyFiftyImage
+            },
+            {
+                path: 'text-promo',
+                name: 'Text Promo',
+                component: TextPromo
             }
         ]
     }

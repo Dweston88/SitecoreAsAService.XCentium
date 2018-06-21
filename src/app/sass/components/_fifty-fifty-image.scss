@@ -7,6 +7,30 @@
         padding: 5rem;
         justify-content: center;
         height: 100%;
+
+        &.right{
+            align-items: flex-end;
+            text-align: right;
+
+            .h-line-mark{
+                position: relative;
+                
+                &:before{
+                    position: absolute;
+                    right: 0;
+                    top: -5px;
+                }
+            }
+        }
+
+        &.center{
+            align-items: center;
+            text-align: center;
+
+            .h-line-mark:before{
+                margin: 0px auto 5px auto;
+            }
+        }
     }
 
     .l-fifty-image{

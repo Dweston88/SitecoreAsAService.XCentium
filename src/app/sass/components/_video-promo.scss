@@ -8,6 +8,14 @@
     display: flex;
     overflow: hidden;
 
+    &__text{
+        position: absolute;
+        padding: 3rem;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+    }
+
     &:before {
         height: 300px;
         content: '';

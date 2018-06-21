@@ -7,6 +7,11 @@
     z-index: 0;
 
     &__image {
+        border-right: 1px solid $dark-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
 
     &__image-placeholder {
@@ -16,6 +21,12 @@
     &__content {
         align-self: center;
         letter-spacing: .5px;
+        padding: 1rem 1rem 1rem 2rem;   
+    }
+
+    &__name{
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -23,6 +34,10 @@
     .c-testimonial {
         &__image {
             margin-bottom: rem-calc(24);
+        }
+
+        &__name{
+            display: block;
         }
     }
 }

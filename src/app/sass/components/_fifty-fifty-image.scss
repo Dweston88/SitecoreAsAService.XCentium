@@ -1,0 +1,24 @@
+@import "~@/sass/base";
+
+.l-fifty{
+    .l-fifty-text {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .l-fifty-image{
+        height: 100%;
+    }
+
+    .l-fifty-image-wrapper{
+        height: 100%;
+    }
+
+    .btn{
+        max-width: 200px;
+        white-space: normal;
+    }
+}

@@ -46,3 +46,11 @@
         white-space: normal;
     }
 }
+
+@include media-breakpoint-down(md) {
+    .l-fifty{
+        .l-fifty-text {
+            padding: 2rem;
+        }
+    }
+}

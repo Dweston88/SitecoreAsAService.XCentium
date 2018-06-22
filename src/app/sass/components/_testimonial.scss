@@ -30,6 +30,16 @@
     }
 }
 
+.c-testimonial.no-image {
+    .c-testimonial__content {
+        text-align: center;   
+    }
+
+    .c-testimonial__name {
+        justify-content: center; 
+    }
+}
+
 @include media-breakpoint-down(sm) {
     .c-testimonial {
         &__image {

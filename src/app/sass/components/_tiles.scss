@@ -1,0 +1,14 @@
+@import "~@/sass/base";
+
+.tiles{
+    .col{
+
+    }
+}
+@include media-breakpoint-down(md) {
+    .tiles{
+        .col{
+            flex-basis: auto;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import VideoPromoAlt from 'demo/pages/components/video-promo-alt.vue';
 import Footer from 'demo/pages/components/footer.vue';
 import FiftyFiftyImage from 'demo/pages/components/fifty-fifty-image.vue';
 import TextPromo from 'demo/pages/components/text-promo.vue';
+import Tiles from 'demo/pages/components/tiles.vue';
 
 const ComponentPages = CreateDynamicNavigation([
     {
@@ -64,6 +65,11 @@ const ComponentPages = CreateDynamicNavigation([
                 path: 'text-promo',
                 name: 'Text Promo',
                 component: TextPromo
+            },
+            {
+                path: 'tiles',
+                name: 'Tiles',
+                component: Tiles
             }
         ]
     }

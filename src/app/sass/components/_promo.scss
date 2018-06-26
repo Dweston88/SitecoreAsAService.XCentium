@@ -29,11 +29,27 @@
 
     &__content {
         position: absolute;
-        padding: rem-calc(40) rem-calc(25);
+        padding: rem-calc(25) rem-calc(30);
         bottom: 0;
+        max-height: 100%;
 
         & > *:last-child {
             margin-bottom: 0;
+        }
+
+        &.center {
+            padding: rem-calc(50) rem-calc(50);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+
+            .icon{
+                margin: 0 0 1rem 0;
+            }
         }
     }
 
@@ -46,6 +62,12 @@
         $test: '.c-promo--bg';
 
         @include theme-component($colors: $colors, $properties: 'background-color', $parent: $test, $isParent: true, $includeBody: false);
+    }
+
+    &.no-link{
+        &:after {
+            display: none;
+        }
     }
 
     &:after {

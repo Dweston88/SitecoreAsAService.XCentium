@@ -91,3 +91,21 @@ $white: #ffffff;
 .white-text{
     color: $white;
 }
+
+//Links
+
+.primary-color-text:hover{
+    color: $primary-color;
+}
+
+.primary-color-alt-text:hover{
+    color: $primary-color-alt;
+}
+
+.secondary-color-text:hover{
+    color: $secondary-color;
+}
+
+.secondary-color-alt-text:hover{
+    color: $secondary-color-alt;
+}

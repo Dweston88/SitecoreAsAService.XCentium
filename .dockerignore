@@ -1,0 +1,3 @@
+# Ignoring Docker Tooling
+Dockerfile
+.dockerignore

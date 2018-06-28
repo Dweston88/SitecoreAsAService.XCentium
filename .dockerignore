@@ -1,6 +1,3 @@
 # Ignore Docker Tooling
 dockerfile
 .dockerignore
-
-# Ignore demo directory, FE Developer Workspace
-demo

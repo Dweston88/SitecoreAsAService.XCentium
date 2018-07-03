@@ -15,26 +15,29 @@
             z-index: 1000;
             overflow-y: auto;
             overflow-x: hidden;
-            transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) width;
+            transition: .25s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
             height: calc(100vh - 60px) !important;
             width: 250px;
             flex: 0 0 250px;
 
             &, &.collapsing.show {
                 width: 0;
+                flex: 0;
             }
     
             &.collapsing {
                 position: sticky !important;
-                transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) width;
+                transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
             }
     
             &.show {
                 width: 250px;
+                flex: 0 0 250px;
             }
 
             & > * {
                 width: 250px;
+                flex: 0 0 250px;
             }
         }
 
@@ -64,6 +67,10 @@
             &.collapsing {
                 position: fixed !important;
             }
+        }
+
+        &__content {
+            margin-left: 250px;
         }
     }
 }

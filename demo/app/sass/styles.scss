@@ -24,8 +24,12 @@ body > iframe {
         display: block;
         font-weight: 500;
         text-transform: uppercase;
-        margin-bottom: 10px;
         color: #fff;
+    }
+
+    &__toggle {
+        padding: 0 !important;
+        border: none !important;
     }
 
     &__list {
@@ -36,7 +40,7 @@ body > iframe {
 
     &__links {
         list-style-type: none;
-        margin: 0 0 20px;
+        margin: 10px 0 20px;
         padding: 0 0 20px;
         font-size: 14px;
         border-bottom: 1px solid #ccc;
@@ -65,7 +69,7 @@ body > iframe {
 
     &__list > *:last-child ul {
         border: none;
-        margin: 0;
+        margin-bottom: 0;
         padding: 0;
     }
 }
@@ -227,7 +231,6 @@ body > iframe {
             outline: none;
             border: 1px solid #828282;
             order: 2;
-            margin-right: 20px;
         }
 
         &__bar {
@@ -273,7 +276,6 @@ body > iframe {
             order: 3;
             flex: none;
             width: 100%;
-            background: #ecf0f2;
         }
 
         &__item {

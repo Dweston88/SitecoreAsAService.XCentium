@@ -1,0 +1,74 @@
+@import "~@/sass/base";
+
+.l-search-modal{
+    width: 100%;
+    height: 0px;
+    background: rgba(0, 0, 0, 0.8); 
+    z-index: 1031;
+    display: flex;
+    justify-content: center;
+    left: 100%;
+    transition: .2s ease-out;
+    position: fixed;
+
+    &.open{
+        left: 0;
+        transition: .2s ease-out;
+        height: 100vh;
+    }
+
+    input[type=text], textarea {
+        padding: 15px 15px;
+        width: 600px;
+    }
+}
+
+.c-search-modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    font-size: 2rem;
+
+    i{
+        color: #ffffff;
+    }
+}
+
+.l-search-inner{
+    padding: 10rem 0 0 0;
+
+    .btn{
+        margin: -3px 0 0 -4px;
+        padding: 15px 50px;
+    }
+
+    .h2{
+        padding: 0 0 1rem 0;
+        letter-spacing: .2rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .l-search-modal{
+        input[type=text], textarea {
+            width: 300px;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .l-search-modal{
+        padding-left: 15px;
+        padding-right: 15px;
+
+        input[type=text], textarea {
+            width: 100%;
+        }
+    }
+
+    .l-search-inner{
+        .btn{
+            margin: 10px 0 0 0;
+            width: 100%;
+        }
+    }
+}

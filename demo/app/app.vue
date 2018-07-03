@@ -7,32 +7,35 @@
                 <span class="c-nav__bar"></span>
             </b-navbar-toggle>
 
+            <b-navbar-toggle class="c-sidebar-nav__toggle d-none d-md-block mr-3" target="sidebar-collapse-desktop"></b-navbar-toggle>
+
             <b-navbar-brand v-bind:to="'/'">Component Library</b-navbar-brand>
 
             <b-collapse is-nav id="nav_collapse" class="c-navbar__container">
-                <b-navbar-nav class="c-navbar ml-auto">
+                <b-navbar-nav class="c-navbar">
                     <li class="c-navbar__item">
-                        <router-link class="c-navbar__link c-cta h-color--white" v-bind:to="'/'" exact>Home</router-link>
+                        <router-link class="c-navbar__link" v-bind:to="'/'" exact>Home</router-link>
                     </li>
 
                     <li class="c-navbar__item">
-                        <router-link class="c-navbar__link c-cta h-color--white" v-bind:to="'/pages'">Layouts</router-link>
+                        <router-link class="c-navbar__link" v-bind:to="'/pages'">Layouts</router-link>
                     </li>
 
                     <li class="c-navbar__item">
-                        <router-link class="c-navbar__link c-cta h-color--white" v-bind:to="'/components'">Components</router-link>
+                        <router-link class="c-navbar__link" v-bind:to="'/components'">Components</router-link>
                     </li>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
 
         <div class="app">
-            <div class="app__sidebar">
+            <b-collapse class="app__sidebar" visible id="sidebar-collapse-desktop">
                 <router-view name="sidebar-nav"></router-view>
-            </div>
-            <div class="app__content">
+            </b-collapse>
+
+            <main class="app__content">
                 <router-view></router-view>
-            </div>
+            </main>
         </div>
 
         <!-- This is needed to ensure a modal keyboard trap -->

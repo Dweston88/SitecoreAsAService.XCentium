@@ -1,0 +1,67 @@
+.c-sidebar-nav {
+    padding: 10px 15px;
+
+    &__header {
+        display: block;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__toggle {
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__links {
+        list-style-type: none;
+        margin: 10px 0 20px;
+        padding: 0 0 20px;
+        font-size: 14px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__link {
+        display: block;
+        padding: 5px 0;
+        color: #f0f0f0;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color: #f0f0f0;
+            text-decoration: underline;
+        }
+
+        &.router-link-exact-active {
+            font-weight: 600;
+            color: #fff;
+            background: rgba(255, 255, 255, .05);
+            margin: 0 -20px;
+            padding: 5px 20px;
+        }
+    }
+
+    &__list > *:last-child ul {
+        border: none;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .c-sidebar-nav {
+        padding: 20px;
+    }
+}

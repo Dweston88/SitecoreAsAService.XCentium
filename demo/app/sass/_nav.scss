@@ -1,0 +1,50 @@
+.c-nav {
+    display: flex;
+    background: #ecf0f2;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    height: 60px;
+    z-index: 1039;
+
+    &__logo {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 20px 20px;
+        font-weight: 500;
+        background: #29363d;
+        width: 210px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .c-nav {
+        height: auto;
+        background: #29363d;
+        flex-wrap: wrap;
+
+        &__logo {
+            order: 1;
+            flex: 1;
+            text-align: left;
+        }
+
+        &__toggle {
+            background: transparent;
+            outline: none;
+            border: 1px solid #828282;
+            order: 2;
+        }
+
+        &__bar {
+            background: #cecece;
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 2px;
+            margin: 5px 0;
+        }
+    }
+}

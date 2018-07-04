@@ -1,0 +1,10 @@
+@import "~@/sass/base";
+
+.c-logo {
+    display: block;
+
+    &__img {
+        width: 135px;
+        max-width: 100%;
+    }
+}

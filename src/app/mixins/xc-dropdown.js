@@ -111,8 +111,12 @@ export default {
                 });
             } else {
                 this.hideMenu();
+
                 this.$refs.menu.classList.remove('is-shown');
-                this.$refs.menu.classList.remove('is-visible');
+
+                this.$nextTick(() => {
+                    this.$refs.menu.classList.remove('is-visible');
+                });
             }
         },
         disabled(state, old) {
@@ -153,15 +157,17 @@ export default {
                     this.createPopper(element);
                 }
             } else {
-                let arrow = this.$refs.arrow;
-                let toggle = this.$refs.toggle;
+                if(typeof this.$refs.arrow !== 'undefined') {
+                    let arrow = this.$refs.arrow;
+                    let toggle = this.$refs.toggle;
 
-                this.$nextTick(() => {
-                    let arrowPosition = arrow.getBoundingClientRect();
-                    let togglePosition = toggle.getBoundingClientRect();
+                    this.$nextTick(() => {
+                        let arrowPosition = arrow.getBoundingClientRect();
+                        let togglePosition = toggle.getBoundingClientRect();
 
-                    arrow.style.left = toggle.offsetLeft + (togglePosition.width / 2) - (arrowPosition.width / 2) + 'px';
-                });
+                        arrow.style.left = toggle.offsetLeft + (togglePosition.width / 2) - (arrowPosition.width / 2) + 'px';
+                    });
+                }
             }
 
             this.setTouchStart(true);

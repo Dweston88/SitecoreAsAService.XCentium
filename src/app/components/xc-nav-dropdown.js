@@ -1,8 +1,9 @@
-import { idMixin } from 'bootstrap-vue/src/mixins';
+import { idMixin, listenOnRootMixin } from 'bootstrap-vue/src/mixins';
+import { reflow } from 'bootstrap-vue/src/utils/dom';
 import dropdownMixin from '@/mixins/xc-dropdown';
 
 export default {
-    mixins: [idMixin, dropdownMixin],
+    mixins: [idMixin, dropdownMixin, listenOnRootMixin],
     render(h) {
         const toggle = h(
             'button', {
@@ -38,10 +39,33 @@ export default {
                     role: this.role,
                     'aria-labelledby': this.safeId('_BV_toggle_')
                 },
+                directives: [{
+                    name: 'show',
+                    value: this.visible
+                }],
                 on: {
                     keydown: this.onKeydown // tab, up, down, esc
                 }
-            }, [this.$slots.dropdown, arrow]
+            }, [this.$slots.dropdown, this.arrow ? arrow : null]
+        );
+
+        const transition = h(
+            'transition', {
+                props: {
+                    enterClass: '',
+                    enterActiveClass: 'collapsing',
+                    enterToClass: '',
+                    leaveClass: '',
+                    leaveActiveClass: 'collapsing',
+                    leaveToClass: ''
+                },
+                on: {
+                    enter: this.onEnter,
+                    afterEnter: this.onAfterEnter,
+                    leave: this.onLeave,
+                    afterLeave: this.onAfterLeave
+                }
+            }, [menu]
         );
 
         return h(
@@ -51,8 +75,13 @@ export default {
                     id: this.safeId()
                 },
                 class: this.dropdownClasses
-            }, [toggle, menu]
+            }, [toggle, this.transition ? transition : menu]
         );
+    },
+    data() {
+        return {
+            transitioning: false
+        };
     },
     props: {
         target: {
@@ -79,11 +108,53 @@ export default {
             type: Boolean,
             default: true
         },
+        transition: {
+            type: Boolean,
+            default: false
+        },
         boundary: {
             // String: `scrollParent`, `window` or `viewport`
             // Object: HTML Element reference
             type: [String, Object],
             default: 'scrollParent'
+        }
+    },
+    mounted: function() {
+        this.listenOnRoot('xc::hide::dropdown', this.hideHandler);
+    },
+    methods: {
+        hideHandler: function hideHandler(id) {
+            if(id === this.id) {
+                this.hide();
+            }
+        },
+        onEnter (el) {
+            el.style.height = 0;
+            reflow(el);
+            el.style.height = el.scrollHeight + 'px';
+            this.transitioning = true;
+            // This should be moved out so we can add cancellable events
+            this.$emit('show');
+        },
+        onAfterEnter (el) {
+            el.style.height = null;
+            this.transitioning = false;
+            this.$emit('shown');
+        },
+        onLeave (el) {
+            el.style.height = 'auto';
+            el.style.display = 'block';
+            el.style.height = el.getBoundingClientRect().height + 'px';
+            reflow(el);
+            this.transitioning = true;
+            el.style.height = 0;
+            // This should be moved out so we can add cancellable events
+            this.$emit('hide');
+        },
+        onAfterLeave (el) {
+            el.style.height = null;
+            this.transitioning = false;
+            this.$emit('hidden');
         }
     },
     computed: {
@@ -98,7 +169,6 @@ export default {
 
             return [
                 'c-nav-dropdown__container',
-                this.visible ? 'show' : '',
                 position
             ];
         },
@@ -106,7 +176,10 @@ export default {
             return [
                 'c-nav-dropdown',
                 'dropdown-menu',
-                this.right ? 'dropdown-menu-right' : ''
+                this.right ? 'dropdown-menu-right' : '',
+                this.isNav ? 'navbar-collapse' : '',
+                this.transitioning ? '' : 'collapse',
+                this.visible && !this.transitioning ? 'show' : ''
             ];
         },
         toggleClasses() {

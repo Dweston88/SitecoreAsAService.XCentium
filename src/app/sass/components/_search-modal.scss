@@ -1,74 +1,273 @@
 @import "~@/sass/base";
 
-.l-search-modal{
-    width: 100%;
-    height: 0px;
-    background: rgba(0, 0, 0, 0.8); 
-    z-index: 1031;
-    display: flex;
-    justify-content: center;
-    left: 100%;
-    transition: .2s ease-out;
-    position: fixed;
-
-    &.open{
-        left: 0;
-        transition: .2s ease-out;
-        height: 100vh;
+.c-site-search-modal {
+    .modal{
+        background: rgba(44, 51, 57, 0.8); 
     }
 
-    input[type=text], textarea {
-        padding: 15px 15px;
-        width: 600px;
+    .modal-backdrop {
+        background-color: none;
     }
-}
 
-.c-search-modal-close{
-    position: absolute;
-    top: 1rem;
-    right: 3rem;
-    font-size: 2rem;
-
-    i{
-        color: #ffffff;
+    .modal-dialog {
+        margin: 0;
+        width: 100%;
+        max-width: none;
     }
-}
 
-.l-search-inner{
-    padding: 10rem 0 0 0;
+    .modal-header {
+        border: none;
+        padding: 0;
+    }
 
-    .btn{
-        margin: -3px 0 0 -4px;
-        padding: 15px 50px;
+    .modal-body {
+        width: 770px;
+        max-width: 90%;
+        margin: 0 auto;
+        position: static;
+    }
+
+    .modal-content {
+        padding: rem-calc(130) 0 rem-calc(70);
+        border: none;
+        border-radius: none;
+        // box-shadow: $aha-box-shadow;
+        background: none;
     }
 
     .h2{
-        padding: 0 0 1rem 0;
-        letter-spacing: .2rem;
+        letter-spacing: .1rem;
+        font-weight: 400;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+        opacity: 1;
+        font-size: 36px;
+        font-weight: 300;
+        padding: 0;
+        border-radius: 50%;
+        line-height: 1;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+        background: none;
+        border: none;
+ 
+        @extend .btn;
+        @extend .btn-dark;
+    }
+
+    .close:hover, .close:active, .close:focus {
+        background: none;
+        border: none; 
+    }
+
+    &__search {
+        position: relative;
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            // border-bottom: 1px solid $gray-border;
+            padding: 1rem;
+            font-weight: 500;
+            border-radius: 0px;
+            font-size: 16px;
+        }
+
+        button {
+            position: absolute;
+            right: 0rem;
+            height: 100%;
+            background: $primary-color;
+            color: $white;
+            padding: 0 3rem;
+            font-size: 1.2rem;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $light-grey;
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: pink;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+        color: pink;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: pink;
+    }
+
+    .c-search-modal-close{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        font-size: 2rem;
+        background: none;
+        border: none;
+
+        i{
+            color: #ffffff;
+        }
     }
 }
 
 @include media-breakpoint-down(md) {
-    .l-search-modal{
-        input[type=text], textarea {
-            width: 300px;
+    .c-site-search-modal {
+        .modal{
+            background: rgba(44, 51, 57, 0.8); 
+        }
+    
+        .modal-backdrop {
+            background-color: none;
+        }
+    
+        .modal-dialog {
+            margin: 0;
+            width: 100%;
+            max-width: none;
+        }
+    
+        .modal-header {
+            border: none;
+            padding: 0;
+        }
+    
+        .modal-body {
+            width: 770px;
+            max-width: 90%;
+            margin: 0 auto;
+            position: static;
+        }
+    
+        .modal-content {
+            padding: rem-calc(130) 0 rem-calc(70);
+            border: none;
+            border-radius: none;
+            // box-shadow: $aha-box-shadow;
+            background: none;
+        }
+    
+        .h2{
+            letter-spacing: .1rem;
+            font-weight: 400;
+        }
+    
+        &__search {
+            position: relative;
+    
+            label {
+                display: block;
+                align-items: center;
+            }
+    
+            input {
+                width: 100%;
+            }
+    
+            button {
+                width: 100%;
+                margin: 1rem 0 0 0;
+            }
+    
+            img {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }
-@include media-breakpoint-down(sm) {
-    .l-search-modal{
-        padding-left: 15px;
-        padding-right: 15px;
 
-        input[type=text], textarea {
-            width: 100%;
-        }
-    }
 
-    .l-search-inner{
-        .btn{
-            margin: 10px 0 0 0;
-            width: 100%;
-        }
-    }
-}
+// .l-search-modal{
+//     width: 100%;
+//     height: 0px;
+//     background: rgba(0, 0, 0, 0.8); 
+//     z-index: 1031;
+//     display: flex;
+//     justify-content: center;
+//     left: 100%;
+//     transition: .2s ease-out;
+//     position: fixed;
+
+//     &.open{
+//         left: 0;
+//         transition: .2s ease-out;
+//         height: 100vh;
+//     }
+
+//     input[type=text], textarea {
+//         padding: 15px 15px;
+//         width: 600px;
+//     }
+// }
+
+// .c-search-modal-close{
+//     position: absolute;
+//     top: 1rem;
+//     right: 3rem;
+//     font-size: 2rem;
+
+//     i{
+//         color: #ffffff;
+//     }
+// }
+
+// .l-search-inner{
+//     padding: 10rem 0 0 0;
+
+//     .btn{
+//         margin: -3px 0 0 -4px;
+//         padding: 15px 50px;
+//     }
+
+//     .h2{
+//         padding: 0 0 1rem 0;
+//         letter-spacing: .2rem;
+//     }
+// }
+
+// @include media-breakpoint-down(md) {
+//     .l-search-modal{
+//         input[type=text], textarea {
+//             width: 300px;
+//         }
+//     }
+// }
+// @include media-breakpoint-down(sm) {
+//     .l-search-modal{
+//         padding-left: 15px;
+//         padding-right: 15px;
+
+//         input[type=text], textarea {
+//             width: 100%;
+//         }
+//     }
+
+//     .l-search-inner{
+//         .btn{
+//             margin: 10px 0 0 0;
+//             width: 100%;
+//         }
+//     }
+// }

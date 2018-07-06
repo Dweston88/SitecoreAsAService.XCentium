@@ -7,6 +7,8 @@ import SelectDropdown from '@/components/xc-select-dropdown';
 import SelectDropdownItem from '@/components/xc-select-dropdown-item';
 import YouTube from '@/components/xc-youtube.js';
 import MobileNav from '@/components/xc-mobile-nav.vue';
+import Modal from '@/components/xc-modal';
+import InlineSiteSearch from '@/components/xc-inline-site-search.vue';
 
 // Global directives
 import verticalAlign from '@/directives/vertical-align';
@@ -29,6 +31,8 @@ Vue.component('xc-select-dropdown', SelectDropdown);
 Vue.component('xc-select-dropdown-item', SelectDropdownItem);
 Vue.component('xc-youtube', YouTube);
 Vue.component('xc-mobile-nav', MobileNav);
+Vue.component('xc-modal', Modal);
+Vue.component('xc-inline-site-search', InlineSiteSearch);
 
 new Vue({
     el: '#app'

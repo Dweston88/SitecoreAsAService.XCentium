@@ -39,7 +39,7 @@
 
 @include media-breakpoint-down(sm) {
     .c-nav-dropdown {
-        position: static;
+        position: static !important;
         width: 100%;
     }
 }

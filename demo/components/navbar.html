@@ -11,6 +11,7 @@
                 <nav class="c-main-nav">
                     <ul class="c-main-nav__list">
                         <li class="c-main-nav__item">
+                            <!-- This is a mega nav example  -->
                             <xc-nav-dropdown position="none" extra-classes="c-main-nav__link h-hover-line" :transition="true" :arrow="false" id="test-nav-dropdown">
                                 Work <i class="fas fa-chevron-down dropdown-arrow"></i>
 
@@ -125,6 +126,7 @@
                         </li>
 
                         <li class="c-main-nav__item">
+                            <!-- This is an example of a simple dropdown nav -->
                             <xc-nav-dropdown position="left" extra-classes="c-main-nav__link h-hover-line" :arrow="false" id="test-nav-dropdown">
                                 Insights <i class="fas fa-chevron-down dropdown-arrow"></i>
 
@@ -181,9 +183,11 @@
             <nav class="c-icon-nav">
                 <ul class="c-icon-nav__list">
                     <li class="c-icon-nav__item">
-                        <a class="c-icon-nav__link" title="" href="#" aria-label="Search">
-                            <img src="assets/glyphs/search.svg" alt>
-                        </a>
+                        <xc-inline-site-search form-action="#" input-name="query" search-icon="assets/glyphs/search.svg" placeholder="B2B, Commerce, etc.">
+                            <button class="c-icon-nav__link">
+                                <img src="assets/glyphs/search.svg" alt="Search">
+                            </button>
+                        </xc-inline-site-search>
                     </li>
 
                     <li class="c-icon-nav__item d-block d-sm-none">

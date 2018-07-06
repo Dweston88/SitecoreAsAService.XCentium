@@ -1,12 +1,12 @@
 @import "~@/sass/base";
 
 .c-site-search-modal {
-    .modal{
-        background: rgba(44, 51, 57, 0.8); 
-    }
-
     .modal-backdrop {
-        background-color: none;
+        background: rgb(44, 51, 57);
+
+        &.show {
+            opacity: 0.8;
+        }
     }
 
     .modal-dialog {
@@ -30,17 +30,18 @@
     .modal-content {
         padding: rem-calc(130) 0 rem-calc(70);
         border: none;
-        border-radius: none;
-        // box-shadow: $aha-box-shadow;
-        background: none;
+        border-radius: 0;
+        background: transparent;
     }
 
-    .h2{
-        letter-spacing: .1rem;
+    &__heading {
         font-weight: 400;
+        margin-bottom: rem-calc(10);
+        color: $white;
     }
 
     .close {
+        color: $white;
         position: absolute;
         top: 20px;
         right: 20px;
@@ -49,21 +50,21 @@
         font-size: 36px;
         font-weight: 300;
         padding: 0;
-        border-radius: 50%;
         line-height: 1;
         width: 50px;
         height: 50px;
-        z-index: 1;
-        background: none;
+        background: transparent;
         border: none;
- 
-        @extend .btn;
-        @extend .btn-dark;
+        text-shadow: none;
+
+        &:hover, &:active, &:focus {
+            background: transparent;
+            border: none; 
+        }
     }
 
-    .close:hover, .close:active, .close:focus {
-        background: none;
-        border: none; 
+    &__link {
+        @include reset-button();
     }
 
     &__search {
@@ -77,27 +78,28 @@
         input {
             flex: 1;
             border: none;
-            // border-bottom: 1px solid $gray-border;
             padding: 1rem;
             font-weight: 500;
             border-radius: 0px;
             font-size: 16px;
         }
 
-        button {
-            position: absolute;
-            right: 0rem;
-            height: 100%;
-            background: $primary-color;
-            color: $white;
-            padding: 0 3rem;
-            font-size: 1.2rem;
-        }
-
         img {
             width: 24px;
             height: 24px;
         }
+    }
+
+    &__search-submit {
+        @include reset-button();
+
+        position: absolute;
+        right: 0rem;
+        height: 100%;
+        background: $primary-color;
+        color: $white;
+        padding: 0 3rem;
+        font-size: 1.2rem;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -164,15 +166,9 @@
             padding: rem-calc(130) 0 rem-calc(70);
             border: none;
             border-radius: none;
-            // box-shadow: $aha-box-shadow;
-            background: none;
+            background: transparent;
         }
-    
-        .h2{
-            letter-spacing: .1rem;
-            font-weight: 400;
-        }
-    
+
         &__search {
             position: relative;
     

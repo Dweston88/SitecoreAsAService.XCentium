@@ -8,6 +8,8 @@
 
 .c-icon-nav {
     &__link {
+        @include reset-button();
+
         color: #949494;
 
         &:hover,

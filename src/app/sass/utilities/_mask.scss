@@ -11,16 +11,3 @@
         opacity: .75;
     }
 }
-
-.h-mask-alt {
-    background: linear-gradient(20.81deg, #FFFFFF 0%, rgba(255,255,255,1) 100%);
-
-    &.is-dark {
-        background: linear-gradient(0deg, #161E23 0%, #35434B 100%);
-        opacity: 1;
-    }
-}
-
-.h-mask-img{
-    opacity: .5 !important;
-}

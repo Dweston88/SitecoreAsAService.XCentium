@@ -14,8 +14,6 @@ import InlineSiteSearch from '@/components/xc-inline-site-search.vue';
 import verticalAlign from '@/directives/vertical-align';
 import lazyImg from '@/directives/lazy-img';
 import toggleChecked from '@/directives/toggle-checked';
-import searchModal from '@/directives/search-modal';
-
 import skipToLink from '@/utils/skip-to';
 
 Vue.use(BootstrapVue);
@@ -23,7 +21,6 @@ Vue.use(BootstrapVue);
 Vue.directive('vertical-align', verticalAlign);
 Vue.directive('lazy-img', lazyImg);
 Vue.directive('toggle-checked', toggleChecked);
-Vue.directive('search-modal', searchModal);
 
 // Non-visual required components
 Vue.component('xc-nav-dropdown', NavDropdown);

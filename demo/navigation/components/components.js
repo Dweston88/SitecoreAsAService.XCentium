@@ -12,7 +12,6 @@ import TextPromo from 'demo/pages/components/text-promo.vue';
 import Tiles from 'demo/pages/components/tiles.vue';
 import FeaturedPeople from 'demo/pages/components/featured-people.vue';
 import Contact from 'demo/pages/components/contact.vue';
-import SearchModal from 'demo/pages/components/search-modal.vue';
 
 const ComponentPages = CreateDynamicNavigation([
     {
@@ -83,11 +82,6 @@ const ComponentPages = CreateDynamicNavigation([
                 path: 'contact',
                 name: 'Contact',
                 component: Contact
-            },
-            {
-                path: 'search-modal',
-                name: 'Search Modal',
-                component: SearchModal
             }
         ]
     }

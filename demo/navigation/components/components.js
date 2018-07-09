@@ -12,6 +12,7 @@ import TextPromo from 'demo/pages/components/text-promo.vue';
 import Tiles from 'demo/pages/components/tiles.vue';
 import FeaturedPeople from 'demo/pages/components/featured-people.vue';
 import Contact from 'demo/pages/components/contact.vue';
+import BlogContent from 'demo/pages/components/blog-content.vue';
 
 const ComponentPages = CreateDynamicNavigation([
     {
@@ -82,6 +83,11 @@ const ComponentPages = CreateDynamicNavigation([
                 path: 'contact',
                 name: 'Contact',
                 component: Contact
+            },
+            {
+                path: 'blog-content',
+                name: 'Blog Content',
+                component: BlogContent
             }
         ]
     }

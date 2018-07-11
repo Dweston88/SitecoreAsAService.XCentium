@@ -8,12 +8,18 @@
     &__inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 
     // Bootstrap override
     .collapsing {
         display: block;
+    }
+}
+
+.l-header {
+    &__brand {
+        flex: auto;
     }
 }
 
@@ -26,6 +32,7 @@
         &__brand {
             max-width: 30%;
             min-width: 100px;
+            flex: auto;
         }
 
         &__main {

@@ -1,14 +1,15 @@
 @import "~@/sass/base";
 
 $hero-margin: 0 0 rem-calc(40) 0 !default;
-$hero-content-padding: rem-calc(200) 0 0 0 !default;
+$hero-content-padding: rem-calc(70) 0 0 0 !default;
 
 $hero-kicker-margin: 0 0 rem-calc(10) 0 !default;
 
-$hero-heading-color: #484848;
+$hero-heading-color: #fff;
+$hero-font-size: 2.5rem;
 
-$hero-subheading-color: $gray-600 !default;
-$hero-subheading-line-height: 1.5;
+$hero-subheading-color: #fff;
+$hero-subheading-line-height: 1.2;
 $hero-subheading-margin: 0 0 rem-calc(24) 0;
 
 $hero-cta-margin: rem-calc(15) 0 0 0;
@@ -48,12 +49,12 @@ $hero-cta-margin: rem-calc(15) 0 0 0;
     position: relative;
 
     &__content-container {
-        padding-bottom: rem-calc(60);
+        padding-bottom: rem-calc(70);
     }
 
     &__content {
         padding: $hero-content-padding;
-        max-width: 700px;
+        max-width: 480px;
 
         & > *:last-child {
             margin-bottom: 0;
@@ -69,13 +70,17 @@ $hero-cta-margin: rem-calc(15) 0 0 0;
 
     &__heading {
         color: $hero-heading-color;
-        line-height: 1.35;
+        line-height: 1;
         letter-spacing: 1px;
+        font-family: $cardo;
+        font-weight: 500;
+        font-size: $hero-font-size;
     }
 
     &__subheading {
         line-height: $hero-subheading-line-height;
         margin: $hero-subheading-margin;
+        color: $hero-subheading-color;
     }
 
     &__media {

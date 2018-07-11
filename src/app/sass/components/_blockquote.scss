@@ -2,6 +2,7 @@
 
 .c-blockquote {
     position: relative;
+    display: inline;
 
     &:before, &:after {
         content: "";
@@ -23,5 +24,6 @@
         bottom: 0;
         right: 0;
         transform: rotate(180deg);
+        display: none;
     }
 }

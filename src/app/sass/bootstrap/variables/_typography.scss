@@ -2,8 +2,12 @@
 //
 // Font, line-height, and color for body text, headings, and more.
 
+$proxima-nova: 'Proxima Nova', 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif;
+$cardo: 'Cardo', serif;
+
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Nunito Sans', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      $proxima-nova !default;
+$font-family-serif:           $cardo !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -17,7 +21,7 @@ $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.2 !default;
 
 $h1-font-size:                rem-calc(54) !default;
 $h2-font-size:                rem-calc(36) !default;

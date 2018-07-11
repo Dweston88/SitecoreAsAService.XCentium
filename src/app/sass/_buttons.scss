@@ -1,9 +1,37 @@
 .btn{
     padding: 0.375rem 3rem;
-    letter-spacing: .1rem;
+    letter-spacing: 0;
+    font-family: $cardo;
+    text-transform: uppercase;
 }
 
 .btn-wide{
     padding-left: 6rem;
     padding-right: 6rem;
 }
+
+.btn-outline-primary {
+    background-color: $white;
+}
+
+.text-link {
+    font-family: $cardo;
+    
+    &:after {
+        content: "";
+        background-image: url(assets/up-arrow.svg);
+        width: 13px;
+        height: 7px;
+        margin-left: 5px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+

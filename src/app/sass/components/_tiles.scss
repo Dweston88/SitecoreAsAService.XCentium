@@ -12,3 +12,13 @@
         }
     }
 }
+
+.tiles {
+    &__home-page{
+        .row {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: rem-calc(30);
+            }
+        }
+    }
+}

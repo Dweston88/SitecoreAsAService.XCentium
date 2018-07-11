@@ -2,6 +2,17 @@
 
 // Import Font
 @import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 // Customized BootStrap styling
 @import "~bootstrap/scss/functions";

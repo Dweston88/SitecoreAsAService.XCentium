@@ -1,8 +1,8 @@
 @import "~@/sass/base";
 
 footer {
-    background: $light-grey-alt-2;
-    padding: 3rem 0 0 0;
+    background: $primary-color;
+    padding: 0;
 
     .footer-content{
         text-align: center;
@@ -26,13 +26,22 @@ footer {
         a{
             padding: 0 2rem;
             display: block;
-            color: $dark-grey-alt;
+            color: $white;
             text-decoration: none;
+            font-family: $cardo
         }
     }
 
     .footer-text, .copyright{
         font-size: 14px;
+        color: $white;
+        text-align: center;
+        background-color: $primary-color-alt;
+        padding: rem-calc(17);
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     .footer-text{

@@ -1,0 +1,12 @@
+@import "~@/sass/base";
+
+$c-logo-width: 135px !default;
+
+.c-logo {
+    display: block;
+
+    &__img {
+        width: $c-logo-width;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Testimonial - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+@include media-breakpoint-up(sm) {
+    .c-testimonial {
+        &__image {
+            border-right: 1px solid $dark-grey;
+        }
+    }
+}

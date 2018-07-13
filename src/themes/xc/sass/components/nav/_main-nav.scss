@@ -1,0 +1,53 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Main Nav - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$c-mega-nav-background: #3d3c38;
+
+.c-main-nav {
+    &__link {
+        &.active {
+            background: #f1f1f1;
+            box-shadow: inset -1px 0 5px 2px #E6E6E6;
+        }
+
+        .dropdown-arrow {
+            &:before {
+                color: $medium-grey;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .c-main-nav {
+        &__link {
+            &:hover,
+            &:active,
+            &:focus,
+            &.is-open,
+            &[aria-expanded=true] {
+                background: #f1f1f1;
+                box-shadow: inset -1px 0 5px 2px #E6E6E6;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .c-main-nav {
+        &__link {
+            padding: rem-calc(20) rem-calc(30) rem-calc(15);
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: #000;
+            }
+        }
+    }
+}

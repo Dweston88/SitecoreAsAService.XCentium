@@ -1,0 +1,13 @@
+@import "~@/sass/base";
+
+.c-skip-to:focus,
+.c-skip-to:active {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: unset;
+    clip-path: none;
+    background: $gray-100;
+    padding: rem-calc(10) rem-calc(20);
+    display: block;
+}

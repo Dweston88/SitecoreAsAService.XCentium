@@ -1,0 +1,45 @@
+// Import local styles
+
+@import "./sass/base";
+
+// xc Styling
+@import "./sass/utilities/utilities";
+// @import "layouts/layouts";
+@import "./sass/components/components";
+
+[role="button"], button {
+    cursor: pointer;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: all .3s $swift-ease-in-out-timing-function;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.fade-enter-to {
+    opacity: 1;
+}
+
+// Needs to be updated using bootstrap variables
+input[type=text], textarea {
+    padding: 6px 15px;
+    border: 1px solid $primary-color; 
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $medium-grey;
+    opacity: 1; /* Firefox */
+}
+
+.btn {
+    padding: 0.375rem 3rem;
+    letter-spacing: .1rem;
+}
+
+.btn-wide {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}

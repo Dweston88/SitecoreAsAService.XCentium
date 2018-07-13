@@ -1,0 +1,35 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Blockquote - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$c-blockquote-background-image: url('assets/icons/quote-icon.svg');
+
+.c-blockquote {
+    position: relative;
+
+    &:before, &:after {
+        content: "";
+        background-image: $c-blockquote-background-image;
+        position: absolute;
+        width: 106px;
+        height: 90px;
+        opacity: .9;
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        top: 0;
+        left: -35px;
+    }
+
+    &:after {
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+    }
+}

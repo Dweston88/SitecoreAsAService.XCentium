@@ -1,0 +1,156 @@
+@import "~@/sass/base";
+
+$hero-heading-color: #484848;
+$hero-subheading-line-height: 1.5;
+
+.c-hero-center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .h-line-mark{
+        &:before{
+            margin: 0px auto 5px auto;
+        }
+    }
+}
+
+.c-hero-right{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    .h-line-mark{
+        position: relative;
+        
+        &:before{
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+    }
+}
+
+.c-hero {
+    $this: &;
+
+    margin: $hero-margin;
+    position: relative;
+
+    &__content-container {
+        padding-bottom: rem-calc(60);
+    }
+
+    &__content {
+        padding: $hero-content-padding;
+        max-width: 700px;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        @include theme-component($colors: $colors, $properties: 'border-bottom-color', $parent: $this);
+    }
+
+    &__kicker {
+        font-weight: 500;
+        margin: $hero-kicker-margin;
+    }
+
+    &__heading {
+        color: $hero-heading-color;
+        line-height: 1.35;
+        letter-spacing: 1px;
+    }
+
+    &__subheading {
+        line-height: $hero-subheading-line-height;
+        margin: $hero-subheading-margin;
+    }
+
+    &__media {
+        display: block;
+        width: 100%;
+        border: none;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__cta {
+        margin: $hero-cta-margin;
+        cursor: pointer;
+
+        @include theme-component($colors: $colors, $properties: 'color', $parent: $this);
+    }
+
+    &__content-scroll {
+        position: relative;
+        bottom: 30px;
+        text-align: center;
+        top: 30px;
+        margin-top: 15px;
+        display: block;
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+    .c-hero-card {
+        &__container {
+            position: relative;
+            text-align: right;
+            display: flex;
+            align-items: center;
+        }
+    
+        &__content-container {
+            position: absolute;
+            width: 400px;
+            text-align: left;
+            padding: rem-calc(30);
+            z-index: 1;
+        }
+
+        &__subheading {
+            color: $gray-600;
+            line-height: 1.5;
+            margin-bottom: rem-calc(20);
+        }
+    
+        &__media {
+            max-width: 1024px;
+            margin-left: 150px;
+            width: calc(100% - 150px);
+            min-height: 350px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .c-hero-card {
+        &__media {
+            min-height: 500px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .c-hero-card {
+        &__content-container {
+            width: 550px;
+            padding: 48px 48px 36px;
+        }
+    
+        &__subheading {
+            color: $gray-600;
+            margin-bottom: 24px;
+        }
+    
+        &__media {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            min-height: 600px;
+        }
+    }
+}

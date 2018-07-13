@@ -1,0 +1,54 @@
+@import "~@/sass/base";
+
+.l-header {
+    position: relative;
+    background-color: #fff;
+    z-index: 1001;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // Bootstrap override
+    .collapsing {
+        display: block;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .l-header {
+        &__inner {
+            padding: rem-calc(10);
+        }
+
+        &__brand {
+            max-width: 30%;
+            min-width: 100px;
+        }
+
+        &__main {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .l-header {
+        &__inner {
+            height: 75px;
+        }
+    }
+}
+
+@include media-breakpoint-only(sm) {
+    .l-header {
+        &__inner {
+            height: 55px;
+        }
+    }
+}

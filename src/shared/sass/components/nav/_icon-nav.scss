@@ -1,0 +1,38 @@
+@import "~@/sass/base";
+
+$c-icon-nav-color: #949494 !default;
+$c-icon-nav-hover-color: $c-icon-nav-color;
+
+/* ----------------------------------------------------------------------------
+*
+* Icon Nav
+*
+* ---------------------------------------------------------------------------- */
+
+.c-icon-nav {
+    &__link {
+        @include reset-button();
+
+        color: $c-icon-nav-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $c-icon-nav-hover-color;
+        }
+
+        img {
+            max-width: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        @include reset-list();
+    }
+
+    &__item {
+        margin: 0 0 0 rem-calc(15);
+        padding: 0;
+    }
+}

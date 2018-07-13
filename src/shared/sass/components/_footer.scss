@@ -1,0 +1,104 @@
+@import "~@/sass/base";
+
+footer {
+    background: $light-grey-alt-2;
+    padding: 3rem 0 0 0;
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-content-form {
+        padding: .5rem 0 2rem 0;
+
+        input[type=text] {
+            margin: 0 1rem 0 0;
+            width: 256px;
+        }
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 2rem 0;
+        
+        a {
+            padding: 0 2rem;
+            display: block;
+            color: $dark-grey-alt;
+            text-decoration: none;
+        }
+    }
+
+    .footer-text, .copyright {
+        font-size: 14px;
+    }
+
+    .footer-text {
+        max-width: 600px;
+        margin: 3rem auto 2rem auto;
+    }
+
+    .footer-logo {
+        img {
+            max-width: 135px;
+        }
+    }
+
+    .back-to-top {
+        padding: 0 2rem;
+        text-align: center;
+
+        a {
+            border-top: 1px solid $medium-grey;
+            display: block;
+            padding: 1.5rem 0;
+            color: $dark-grey-alt;
+            text-decoration: none;
+            margin: 1rem 0 0 0;
+        }
+
+        img {
+            padding: 0 0 .5rem 0;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+    align-items: center;
+
+    a {
+        background: $medium-grey-alt;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+    }
+
+    i {
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    footer {
+        .footer-content-form{
+            input[type=text] {
+                margin: 0 0 1rem 0;
+            }
+        }
+
+        .footer-nav{
+            display: block;
+        }
+    }
+}

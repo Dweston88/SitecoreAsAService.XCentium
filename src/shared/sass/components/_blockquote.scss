@@ -1,0 +1,15 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Blockquote - Shared Theme
+*
+* -----------------------s----------------------------------------------------- */
+
+$c-blockquote-name-align: right !default;
+
+.c-blockquote {
+    &__name {
+        text-align: $c-blockquote-name-align;
+    }
+}

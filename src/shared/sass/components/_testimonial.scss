@@ -1,0 +1,51 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Testimonial - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$c-testimonial-background: #EFEFF0 !default;
+$c-testimonial-padding: rem-calc(45) 0 !default;
+$c-testimonial-content-padding: 1rem 1rem 1rem 2rem !default;
+
+.c-testimonial {
+    background: $c-testimonial-background;
+    padding: $c-testimonial-padding;
+    position: relative;
+    z-index: 0;
+
+    &__image {
+        text-align: center;
+    }
+
+    &__content {
+        padding: $c-testimonial-content-padding;
+    }
+}
+
+.c-testimonial.no-image {
+    .c-testimonial__content {
+        text-align: center;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .c-testimonial {
+        &__image {
+            margin-bottom: rem-calc(24);
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .c-testimonial {
+        &__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    }
+}

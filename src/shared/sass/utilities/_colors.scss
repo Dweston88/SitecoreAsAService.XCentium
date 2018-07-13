@@ -1,0 +1,35 @@
+@import "~@/sass/base";
+
+// Add support for style guide colors
+@each $color, $value in $colors {
+    .h-color--#{$color} {
+        color: $value !important;
+    }
+}
+
+// Add support for style guide colors
+@each $color, $value in $colors {
+    .h-bg-color--#{$color} {
+        background-color: $value !important;
+    }
+}
+
+// Changes the text color based off of the theme - only use with theme background colors
+.h-text-contrast {
+    @include theme-color-contrast($colors, $isParent: true);
+}
+
+//Colors
+$primary-color: #11869b;
+$primary-color-alt: #015666;
+$secondary-color: #a9044f;
+$secondary-color-alt: #ba0034;
+$tertiary-color: #f2a300;
+$tertiary-color-alt: #f38800;
+$light-grey: #cdd6dd;
+$light-grey-alt: #adbbc5;
+$light-grey-alt-2: #f6f6f6;
+$medium-grey: #a399a8;
+$medium-grey-alt: #526774;
+$dark-grey: #35434b;
+$dark-grey-alt: #161e23;

@@ -10,8 +10,7 @@ const cssLoader = {
 };
 
 config.entry.app = [
-    'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, '../demo/index.js')
+    'webpack-hot-middleware/client?reload=true'
 ];
 
 config.output = {

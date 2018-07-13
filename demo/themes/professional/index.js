@@ -2,7 +2,7 @@
 import initDemo from 'demo/app/demo';
 
 // Load the theme
-import 'src/themes/xc/index.js';
+import 'src/themes/professional/index.js';
 
 // Import demo navigation
 import HomePages from 'demo/shared/navigation/static/home/home.js';

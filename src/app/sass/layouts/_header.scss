@@ -8,18 +8,12 @@
     &__inner {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     // Bootstrap override
     .collapsing {
         display: block;
-    }
-}
-
-.l-header {
-    &__brand {
-        flex: auto;
     }
 }
 

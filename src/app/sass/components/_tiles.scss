@@ -21,4 +21,33 @@
             }
         }
     }
+
+    &__solid-color {
+        .c-promo{
+            background-color: $primary-color;
+            height: 100%;
+
+            &__heading{
+                font-style: normal;
+                font-size: rem-calc(30);
+                line-height: rem-calc(41);
+                margin-bottom: rem-calc(10);
+            }
+
+            &__desc {
+                font-size: rem-calc(20);
+                line-height: rem-calc(24);
+                font-weight: 500;
+            }
+           
+            &__content {
+                position: relative;
+                padding: rem-calc(30) rem-calc(40);
+            }
+
+            &__media, .h-mask{
+                display: none;
+            }
+        }
+    }
 }

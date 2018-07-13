@@ -7,98 +7,102 @@
         <main>
             <xc-hero></xc-hero>
             <div class="container">
-                    <div class="mod-title mod-title--center">
-                        <h2 class="mod-title__heading">TYPES OF CASES WE HANDLE</h2>
-                        <p class="mod-title__subheading">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus </p>
+                <div class="loan-details margin-bottom">
+                    <div class="loan-details__heading">
+                        <h2>Loan Details</h2>
                     </div>
-                <tiles></tiles>
-                <div class="mod-title mod-title--center">
-                    <h2 class="mod-title__heading">CASE RESULTS</h2>
-                    <p class="mod-title__subheading">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus </p>
-                </div>
-                <div class="row r-border margin-bottom">
-                    <div class="col">
-                        <div class="case-col">
-                            <h4 class="case-col__heading">$4.5 BILLION</h4>
-                            <span class="case-col__subheading">CORPORATE LITIGATION</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="case-col">
-                            <h4 class="case-col__heading">$12 MILLION</h4>
-                            <span class="case-col__subheading">DECK COLLAPSE</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="case-col">
-                            <h4 class="case-col__heading">$9 MILLION</h4>
-                            <span class="case-col__subheading">VIOLENT ASSAULT</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="case-col">
-                            <h4 class="case-col__heading">$5.2 MILLION</h4>
-                            <span class="case-col__subheading">HAND INJURY</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="case-col">
-                            <h4 class="case-col__heading">$4.5 MILLION</h4>
-                            <span class="case-col__subheading">WILL CONTEST</span>
+                    <div class=" loan-details__cols">
+                        <div class="row">
+                            <div  class="col">
+                                <ul>
+                                    <li>Borrow up to 90% of the value of your home</li>
+                                    <li>Terms from 5-15 years</li>
+                                    <li>No Closing costs or appraisal fees</li>
+                                    <li>Quick Approval process</li>
+                                </ul>
+                            </div>
+                            <div  class="col">
+                                <div class="row loan-details__rates__cols">
+                                    <div class="col">
+                                        <div class="rates-label">As low as</div>
+                                        <div class="rates">5.5% APR</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="rates-label">Max Term</div>
+                                        <div class="rates">180 Months</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <section class="border-top border-bottom margin-bottom">
-                    <div class="mod-title align-right">
-                        <h2 class="mod-title__heading">LEGAL ADVICE YOU CAN COUNT ON</h2>
-                        <p class="mod-title__subheading">Don’t take our word for it, see what some of our clients have to say.</p>
-                    </div>
-                    <xc-testimonial></xc-testimonial>
-                    <div class="text-right">
-                        <a href="#" class="text-link">More Tesimonials</a>
-                    </div>
-                </section>
                 <div class="mod-title">
-                    <h2 class="mod-title__heading">Latest News</h2>
-                    <p class="mod-title__subheading">Nam libero tempore, cum soluta nobis est eligendi optiol.</p>
+                    <h2 class="mod-title__heading">Two ways to get value from your home</h2>
+                    <p class="mod-title__subheading">The right home equity loan type depends on you situation and your needs.  Check it out!</p>
                 </div>
+                <tiles></tiles>
+                <div class="mod-title">
+                    <h2 class="mod-title__heading">The right product for your needs</h2>
+                    <p class="mod-title__subheading">A home equity line of credit (HELOC) or home equity loan is a great way to leverage the value of your home and ensure you have funds available for whatever you want, such as home repairs and improvements, a new car, or even a vacation home.</p>
+                </div>
+                <table class="responsive col-four-table">
+					<tr>
+                        <th></th>
+						<th>HELOC</th>
+						<th>HELOC (Interest Only)</th>
+						<th>Home Equity Loan</th>
+                    </tr>
+                    <tr>
+						<td>Rate</td>
+						<td>as low as 4.000% (Variable)</td>
+						<td>as low as 4.000% (Variable)</td>
+                        <td>as low as 5.500 to 6.500% (Fixed)</td>
+                    </tr>
+                    <tr>
+						<td>Quick Summary</td>
+						<td>Borrow funds as you need them, up to your line of credit amount ( up to 90% of the value of your home)</td>
+						<td>as low as 4.000% (Variable)</td>
+                        <td>as low as 5.500 to 6.500% (Fixed)</td>
+                    </tr>
+                    <tr>
+						<td>Max Term</td>
+						<td>180 Months</td>
+						<td>84 Months (Balloon)</td>
+                        <td>60, 120 or 180 Months</td>
+                    </tr>
+                </table>
+           
                 <div class="tiles">
-                    <div class="row">
+                    <div class="row  margin-bottom  no-gutters">
                         <div class="col">
-                            <a href="#0" class="c-promo c-promo__alt">
-                                <div class="c-promo__media h-placeholder-image h-placeholder-image--3-2">
-                                    <img src="assets/news-grid-image.jpg" v-lazy-img="'assets/news-grid-image-2.jpg'" alt="" />
+                            <div class="c-promo no-link">
+                                <div class="c-promo__media h-placeholder-image h-placeholder-image--16-9">
+                                    <img src="assets/Rectangle8Copy7.png" v-lazy-img="'assets/Rectangle8Copy7.png'" alt="" />
                                 </div>
-                                <h3 class="c-promo__alt__heading">Some Borrowers Owe More than a Million Dollars in Student Loans</h3>
-                                <p class="c-promo__alt__desc">So says the WSJ here.  It reports on how one such borrower landed in that position.</p>
-                            </a>
+
+
+                                <div class="c-promo__content top">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col">
-                            <a href="#0" class="c-promo c-promo__alt">
-                                <div class="c-promo__media h-placeholder-image h-placeholder-image--3-2">
-                                    <img src="assets/news-grid-image.jpg" v-lazy-img="'assets/news-grid-image.jpg'" alt="" />
+                            <div class="c-promo no-link solid-bg is-dark">
+                                <div class="c-promo__media h-placeholder-image h-placeholder-image--16-9">
+                                    <img src="assets/Rectangle8Copy7.png" v-lazy-img="'assets/Rectangle8Copy7.png'" alt="" />
                                 </div>
-                                <h3 class="c-promo__alt__heading">Office of the Comptroller of the Currency will authorize banks to compete with payday lenders</h3>
-                                <p class="c-promo__alt__desc">A federal regulator on Wednesday encouraged banks to offer small, short-term loans to people in need of emergency cash.</p>
-                            </a>
-                        </div>
 
-                        <div class="col">
-                            <a href="#0" class="c-promo c-promo__alt">
-                                <div class="c-promo__media h-placeholder-image h-placeholder-image--3-2">
-                                    <img src="assets/news-grid-image.jpg" v-lazy-img="'assets/news-grid-image.jpg'" alt="" />
+                                <span class="h-mask is-dark"></span>
+
+                                <div class="c-promo__content center left">
+                                    <p class="c-promo__desc">​Take the time you need to review your needs and our rates.  Also feel free to call us at 1-800-ASIXNOW, our knowledgeable advisors are here to help guide you.</p>
+                                    <a href="#" class="c-hero__cta c-cta btn btn-primary">APPLY NOW</a>
                                 </div>
-                                <h3 class="c-promo__alt__heading">Supreme Court holds employers can use arbitration agreements to ban collective employment actions</h3>
-                                <p class="c-promo__alt__desc">Having multiple accounts on Asix is super convenient, but to make things even easier, here are some more account tips.</p>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-right margin-bottom">
-                    <a href="#" class="text-link">More Editorials</a>
-                </div>
-            </div>
+             </div>
         </main>
 
         <xc-footer></xc-footer>

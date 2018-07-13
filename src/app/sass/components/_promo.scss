@@ -51,6 +51,21 @@
                 margin: 0 0 1rem 0;
             }
         }
+
+        &.left {
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        &.top {
+            padding: 3.125rem 3.125rem;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 100%;
+        }
     }
 
     &__heading {
@@ -71,6 +86,19 @@
     &.no-link{
         &:after {
             display: none;
+        }
+    }
+
+    &.solid-bg {
+        .c-promo__media img, .h-mask {
+            display: none;
+        }
+        background-color: #E4E4E4;
+
+        &.is-dark {
+            .c-promo__desc{
+                color: $gray;
+            }
         }
     }
 

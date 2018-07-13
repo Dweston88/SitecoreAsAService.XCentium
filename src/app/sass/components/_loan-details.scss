@@ -1,0 +1,67 @@
+@import "~@/sass/base";
+
+.loan-details {
+    &__heading{
+        padding: rem-calc(28) rem-calc(25);
+        background-color: #E3E3E3;
+        
+        h2{
+            font-family: $cardo;
+            font-size: rem-calc(40);
+            line-height: rem-calc(40);
+            margin-bottom: 0;
+        }
+    }
+
+    &__cols{
+        padding: rem-calc(21) rem-calc(25);
+        background-color: #F4F4F4;
+
+        .col:first-child {
+            border-right: 1px solid #979797;
+
+            ul {
+                margin: 8px 0;
+                padding: 0;
+                list-style: none;
+
+                li{
+                    font-size: rem-calc(20);
+                    line-height: rem-calc(28);
+                    font-family: $cardo;
+                    font-weight: 700;
+                    margin-bottom: rem-calc(20);
+                }
+            }
+        }
+
+        .col{
+            display: flex;
+        }
+    }
+
+    &__rates__cols{
+        width: 100%;
+
+        .col {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .rates-label{
+            font-family: $cardo;
+            font-size: rem-calc(20);
+            margin-bottom: rem-calc(15);
+        }
+
+        .rates{
+            font-family: $cardo;
+            color: $primary-color;
+            font-size: rem-calc(40);
+            font-weight: 700;
+        }
+    }
+}

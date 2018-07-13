@@ -62,39 +62,7 @@
                     <h2 class="mod-title__heading">Latest News</h2>
                     <p class="mod-title__subheading">Nam libero tempore, cum soluta nobis est eligendi optiol.</p>
                 </div>
-                <div class="tiles">
-                    <div class="row">
-                        <div class="col">
-                            <a href="#0" class="c-promo c-promo__alt">
-                                <div class="c-promo__media h-placeholder-image h-placeholder-image--3-2">
-                                    <img src="assets/Group19.png" v-lazy-img="'assets/Group19.png'" alt="" />
-                                </div>
-                                <h3 class="c-promo__alt__heading">Some Borrowers Owe More than a Million Dollars in Student Loans</h3>
-                                <p class="c-promo__alt__desc">So says the WSJ here.  It reports on how one such borrower landed in that position.</p>
-                            </a>
-                        </div>
-
-                        <div class="col">
-                            <a href="#0" class="c-promo c-promo__alt">
-                                <div class="c-promo__media h-placeholder-image h-placeholder-image--3-2">
-                                    <img src="assets/Group20.png" v-lazy-img="'assets/Group20.png'" alt="" />
-                                </div>
-                                <h3 class="c-promo__alt__heading">Office of the Comptroller of the Currency will authorize banks to compete with payday lenders</h3>
-                                <p class="c-promo__alt__desc">A federal regulator on Wednesday encouraged banks to offer small, short-term loans to people in need of emergency cash.</p>
-                            </a>
-                        </div>
-
-                        <div class="col">
-                            <a href="#0" class="c-promo c-promo__alt">
-                                <div class="c-promo__media h-placeholder-image h-placeholder-image--3-2">
-                                    <img src="assets/Group21.png" v-lazy-img="'assets/Group21.png'" alt="" />
-                                </div>
-                                <h3 class="c-promo__alt__heading">Supreme Court holds employers can use arbitration agreements to ban collective employment actions</h3>
-                                <p class="c-promo__alt__desc">Having multiple accounts on Asix is super convenient, but to make things even easier, here are some more account tips.</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <xc-news-list></xc-news-list>
                 <div class="text-right margin-bottom">
                     <a href="#" class="text-link">More Editorials</a>
                 </div>

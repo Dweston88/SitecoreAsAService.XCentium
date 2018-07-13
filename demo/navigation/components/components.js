@@ -3,6 +3,7 @@ import { CreateDynamicNavigation } from 'demo/app/util/navigation';
 import Hero from 'demo/pages/components/hero.vue';
 import Navbar from 'demo/pages/components/navbar.vue';
 import NewsGrid from 'demo/pages/components/news-grid.vue';
+import NewsList from 'demo/pages/components/news-list.vue';
 import Testimonial from 'demo/pages/components/testimonial.vue';
 import VideoPromo from 'demo/pages/components/video-promo.vue';
 import VideoPromoAlt from 'demo/pages/components/video-promo-alt.vue';
@@ -38,6 +39,11 @@ const ComponentPages = CreateDynamicNavigation([
                 path: 'news-grid',
                 name: 'News Grid',
                 component: NewsGrid
+            },
+            {
+                path: 'news-list',
+                name: 'News List',
+                component: NewsList
             },
             {
                 path: 'testimonial',

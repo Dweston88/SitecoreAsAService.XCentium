@@ -2,14 +2,22 @@
 
 /* ----------------------------------------------------------------------------
 *
-* Blockquote - Shared Theme
+* Contact - XC Theme
 *
 * ---------------------------------------------------------------------------- */
 
-$c-blockquote-name-align: right !default;
-
-.c-blockquote {
-    &__name {
-        text-align: $c-blockquote-name-align;
+.l-contact-form{
+    textarea{
+        min-height: 11rem;
     }
+}
+
+.l-contact-submit{
+    input{
+        max-width: 45%;
+    }
+}
+
+.c-contact-i{
+    color: $primary;
 }

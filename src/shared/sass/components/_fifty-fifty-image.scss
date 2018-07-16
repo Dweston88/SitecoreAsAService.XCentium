@@ -1,35 +1,28 @@
 @import "~@/sass/base";
 
+/* ----------------------------------------------------------------------------
+*
+* Fifty Fifty Image - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
 .l-fifty {
     .l-fifty-text {
         display: flex;
         flex-direction: column;
         padding: 5rem;
+        align-items: flex-start;
         justify-content: center;
         height: 100%;
 
         &.right {
             align-items: flex-end;
             text-align: right;
-
-            .h-line-mark {
-                position: relative;
-                
-                &:before {
-                    position: absolute;
-                    right: 0;
-                    top: -5px;
-                }
-            }
         }
 
         &.center {
             align-items: center;
             text-align: center;
-
-            .h-line-mark:before{
-                margin: 0px auto 5px auto;
-            }
         }
     }
 
@@ -39,11 +32,6 @@
 
     .l-fifty-image-wrapper {
         height: 100%;
-    }
-
-    .btn {
-        max-width: 200px;
-        white-space: normal;
     }
 }
 

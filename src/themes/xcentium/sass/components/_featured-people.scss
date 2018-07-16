@@ -2,14 +2,12 @@
 
 /* ----------------------------------------------------------------------------
 *
-* Blockquote - Shared Theme
+* Featured People - XC Theme
 *
 * ---------------------------------------------------------------------------- */
 
-$c-blockquote-name-align: right !default;
-
-.c-blockquote {
-    &__name {
-        text-align: $c-blockquote-name-align;
+.c-featured-image {
+    img{
+        border-radius: 50%;
     }
 }

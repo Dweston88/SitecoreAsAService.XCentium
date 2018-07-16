@@ -1,0 +1,29 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Footer - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+footer {
+    background: $light-grey-alt-2;
+
+    .footer-nav{
+        a {
+            color: $dark-grey-alt;
+        }
+    }
+
+    .back-to-top{
+        a {
+            border-top: 1px solid $medium-grey;
+        }
+    }
+}
+
+.social{
+    a {
+        background: $medium-grey-alt;
+    }
+}

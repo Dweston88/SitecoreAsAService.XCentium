@@ -5,7 +5,7 @@ import initDemo from 'demo/app/demo';
 import { OverrideChildPage } from 'demo/app/util/navigation';
 
 // Load the theme
-import 'src/themes/xc/index.js';
+import 'src/themes/xcentium/index.js';
 
 // Import demo navigation
 import HomePages from 'demo/shared/navigation/static/home/home.js';

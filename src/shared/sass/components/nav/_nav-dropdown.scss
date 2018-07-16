@@ -21,10 +21,10 @@
     }
 
     &__link {
-        color: $dark-grey;
+        color: $gray-800;
 
         &:hover, &:focus, &:active {
-            color: $dark-grey;
+            color: $gray-800;
         }
     }
 
@@ -33,7 +33,7 @@
     }
 
     &__arrow {
-        @include bordered-triangle(20px, 1px, $white, $light-grey, up, true);
+        @include bordered-triangle(20px, 1px, $white, $gray-600, up, true);
 
         // arrows don't need scaling so use px
         top: -20px;

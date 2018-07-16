@@ -1,5 +1,11 @@
 @import "~@/sass/base";
 
+/* ----------------------------------------------------------------------------
+*
+* Contact - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
 .l-contact {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -8,10 +14,6 @@
 .l-contact-form {
     input, textarea {
         width: 100%;
-    }
-
-    textarea {
-        min-height: 11rem;
     }
 }
 

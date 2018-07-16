@@ -1,7 +1,13 @@
 @import "~@/sass/base";
 
+/* ----------------------------------------------------------------------------
+*
+* Footer - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
 footer {
-    background: $light-grey-alt-2;
+    background: $gray-400;
     padding: 3rem 0 0 0;
 
     .footer-content {
@@ -26,7 +32,7 @@ footer {
         a {
             padding: 0 2rem;
             display: block;
-            color: $dark-grey-alt;
+            color: $gray-800;
             text-decoration: none;
         }
     }
@@ -51,10 +57,10 @@ footer {
         text-align: center;
 
         a {
-            border-top: 1px solid $medium-grey;
+            border-top: 1px solid $gray-700;
             display: block;
             padding: 1.5rem 0;
-            color: $dark-grey-alt;
+            color: $gray-800;
             text-decoration: none;
             margin: 1rem 0 0 0;
         }
@@ -73,7 +79,7 @@ footer {
     align-items: center;
 
     a {
-        background: $medium-grey-alt;
+        background: $gray-700;
         border-radius: 50px;
         width: 40px;
         height: 40px;
@@ -84,7 +90,7 @@ footer {
     }
 
     i {
-        color: #ffffff;
+        color: $white;
         font-size: 1.5rem;
     }
 }

@@ -36,66 +36,14 @@ gulp.task('clean', (cb) => {
 
 gulp.task('demo-prod', ['clean'], (cb) => {
     const config = require('./config/webpack.dist.config');
-    const args = yargs.argv;
 
-    if(args.theme) {
-        log(`Using theme: ${args.theme}`);
-
-        config.output.path = path.join(paths.dist, args.theme);
-        config.entry.app = path.join(paths.themes.dev, args.theme, 'index.js');
-
-        createDistFiles(config, cb);
-    } else {
-        const themes = getFolders(paths.themes.dev);
-        let completedThemes = 0;
-
-        log.info(`No theme specified, building all themes`);
-
-        themes.forEach(theme => {
-            config.output.path = path.join(paths.dist, theme);
-            config.entry.app = path.join(paths.themes.dev, theme, 'index.js');
-
-            createDistFiles(config, () => {
-                completedThemes++;
-
-                if(completedThemes === themes.length) {
-                    cb();
-                }
-            });
-        });
-    }
+    configureProd(config, paths.themes.dev, cb);
 });
 
 gulp.task('prod', ['clean'], (cb) => {
     const config = require('./config/webpack.dist.config');
-    const args = yargs.argv;
 
-    if(args.theme) {
-        log(`Using theme: ${args.theme}`);
-
-        config.output.path = path.join(paths.dist, args.theme);
-        config.entry.app = path.join(paths.themes.prod, args.theme, 'index.js');
-
-        createDistFiles(config, cb);
-    } else {
-        const themes = getFolders(paths.themes.prod);
-        let completedThemes = 0;
-
-        log.info(`No theme specified, building all themes`);
-
-        themes.forEach(theme => {
-            config.output.path = path.join(paths.dist, theme);
-            config.entry.app = path.join(paths.themes.prod, theme, 'index.js');
-
-            createDistFiles(config, () => {
-                completedThemes++;
-
-                if(completedThemes === themes.length) {
-                    cb();
-                }
-            });
-        });
-    }
+    configureProd(config, paths.themes.prod, cb);
 });
 
 // Create a prod task based on the theme name
@@ -108,7 +56,7 @@ gulp.task('dev', () => {
 
         config.entry.app.push(path.join(paths.themes.dev, args.theme, 'index.js'));
     } else {
-        log.info(`No theme specified, using theme: ${paths.baseTheme}`);
+        log(`No theme specified, using theme: ${paths.baseTheme}`);
 
         config.entry.app.push(path.join(paths.themes.dev, paths.baseTheme, 'index.js'));
     }
@@ -135,6 +83,8 @@ gulp.task('dev', () => {
         ]
     });
 });
+
+gulp.task('default', ['dev']);
 
 function getFolders(dir) {
     return fs.readdirSync(dir)
@@ -169,4 +119,33 @@ function createDistFiles(config, callback) {
     });
 }
 
-gulp.task('default', ['dev']);
+function configureProd(config, themePath, cb) {
+    const args = yargs.argv;
+
+    if(args.theme) {
+        log(`Using theme: ${args.theme}`);
+
+        config.output.path = path.join(paths.dist, args.theme);
+        config.entry.app = path.join(themePath, args.theme, 'index.js');
+
+        createDistFiles(config, cb);
+    } else {
+        const themes = getFolders(themePath);
+        let completedThemes = 0;
+
+        log(`No theme specified, building all themes`);
+
+        themes.forEach(theme => {
+            config.output.path = path.join(paths.dist, theme);
+            config.entry.app = path.join(themePath, theme, 'index.js');
+
+            createDistFiles(config, () => {
+                completedThemes++;
+
+                if(completedThemes === themes.length) {
+                    cb();
+                }
+            });
+        });
+    }
+}

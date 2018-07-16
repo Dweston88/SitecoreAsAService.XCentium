@@ -1,4 +1,8 @@
 // Inherit from the base theme
 @import '../_base/theme.scss';
-@import 'sass/components/blockquote';
-// Add any theme-specific styles here
+
+@import 'sass/variables';
+@import 'sass/buttons';
+// @import "layouts/layouts";
+@import "./sass/utilities/utilities";
+@import "./sass/components/components";

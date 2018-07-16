@@ -1,0 +1,6 @@
+// We have to load bootstrap's functions/mixins in order to use all of the variable overrides
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+
+// Import local variables
+@import "variables";

@@ -1,0 +1,24 @@
+@import "~@/sass/base";
+
+.tiles{
+    .col{
+
+    }
+}
+@include media-breakpoint-down(md) {
+    .tiles{
+        .col{
+            flex-basis: auto;
+        }
+    }
+}
+
+.tiles {
+    &__home-page{
+        .row {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: rem-calc(30);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "~@/sass/base";
+
+.case-col{
+    text-align: center;
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: rem-calc(22);
+        line-height: rem-calc(30);
+    }
+
+    &__subheading {
+        text-transform: uppercase;
+        color: #AAA8A8;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: rem-calc(40);
+}

@@ -1,5 +1,5 @@
 <template>
-    <navbar></navbar>
+    <lmm-navbar></lmm-navbar>
 </template>
 
 <script>

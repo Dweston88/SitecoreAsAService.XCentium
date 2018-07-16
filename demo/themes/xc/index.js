@@ -15,8 +15,10 @@ import LayoutPages from 'demo/shared/navigation/layouts/layouts.js';
 // A complex way of overwriting components templates
 import Tiles from './pages/components/tiles.vue';
 import Navbar from './pages/components/navbar.vue';
+import Titles from './pages/components/titles.vue';
 
 OverrideChildPage(ComponentPages, 'Tiles', Tiles);
 OverrideChildPage(ComponentPages, 'Navbar', Navbar);
+OverrideChildPage(ComponentPages, 'Navbar', Titles);
 
 initDemo([].concat(HomePages, ComponentPages, LayoutPages));

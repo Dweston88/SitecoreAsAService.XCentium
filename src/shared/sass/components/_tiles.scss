@@ -1,5 +1,6 @@
 @import "~@/sass/base";
 
+// TODO: Update views to col-md instead of col and this isn't necessary
 @include media-breakpoint-down(md) {
     .tiles {
         .col {

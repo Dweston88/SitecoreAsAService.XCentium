@@ -1,10 +1,18 @@
 @import "~@/sass/base";
 
+/* ----------------------------------------------------------------------------
+*
+* Text Promo - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$c-text-promo-padding: 6rem 0 !default;
+
 .c-text-promo {
     .c-hero {
         &__content{
             max-width: 100%;
-            padding: 6rem 0;
+            padding: $c-text-promo-padding;
         }
 
         &__content-container {

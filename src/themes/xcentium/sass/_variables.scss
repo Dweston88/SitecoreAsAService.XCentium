@@ -1,3 +1,9 @@
+/* ----------------------------------------------------------------------------
+*
+* Variables - XC Theme Specific
+*
+* ---------------------------------------------------------------------------- */
+
 // Easing Curves
 $swift-ease-out-duration: 0.4s !default;
 $swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
@@ -42,6 +48,19 @@ $medium-grey-alt: #526774;
 
 $dark-grey: #35434b;
 $dark-grey-alt: #161e23;
+
+/* ----------------------------------------------------------------------------
+*
+* Variable - Shared Theme Override
+*
+* ---------------------------------------------------------------------------- */
+
+// Hero Component
+$hero-heading-color: #484848;
+
+// Search Modal
+$c-site-search-modal-background: rgb(44, 51, 57);
+$c-site-search-modal-input-placholder-color: $light-grey;
 
 .primary-color-text{
     color: $primary-color;
@@ -96,12 +115,11 @@ $dark-grey-alt: #161e23;
     color: $dark-grey-alt;
 }
 
-.white-text{
+.white-text {
     color: $white;
 }
 
 //Links
-
 .primary-color-text:hover{
     color: $primary-color;
 }

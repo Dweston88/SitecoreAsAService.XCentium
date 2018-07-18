@@ -13,8 +13,8 @@ import yargs from 'yargs';
 import log from 'fancy-log';
 import PluginError from 'plugin-error';
 import fs from 'fs';
+import watch from 'gulp-watch';
 
-// map of all paths
 let paths = {
     baseTheme: '_base',
     entry: {
@@ -27,26 +27,83 @@ let paths = {
     dist: path.join(__dirname, 'dist')
 };
 
-gulp.task('clean', (cb) => {
+/**
+ * Description: Starts a watch on all .scss assets in the src directory
+ * and runs the production build on file change. If no theme is specified,
+ * ALL themes are built.
+ *
+ * Usage: gulp watch
+ *        gulp watch --theme <theme-name>
+ */
+gulp.task('watch', cb => {
+    let isRunning = false;
+    let isQueued = false;
+
+    // Watch any scss changes in the themes and do a prod rebuild
+    return watch('src/**/*.scss', { ignoreInitial: true }, () => {
+        runWatch();
+    });
+
+    function runWatch() {
+        if(!isRunning) {
+            log('Starting Watch build');
+
+            isRunning = true;
+
+            configureProd(require('./config/webpack.dist.config'), paths.themes.prod, () => {
+                log('Watch build is complete');
+                isRunning = false;
+
+                // If we're finished but another build is queued, run it
+                if(isQueued) {
+                    log('Starting Queued Watch build');
+
+                    isQueued = false;
+                    runWatch();
+                }
+            });
+        } else {
+            isQueued = true;
+        }
+    }
+});
+
+gulp.task('clean', cb => {
     del([paths.dist]).then(function (paths) {
         log.info('[clean]', paths);
         cb();
     });
 });
 
-gulp.task('demo-prod', ['clean'], (cb) => {
-    const config = require('./config/webpack.dist.config');
-
-    configureProd(config, paths.themes.dev, cb);
+/**
+ * Description: Build the demo site out as minified assets. If no theme is
+ * specified, ALL themes are built.
+ *
+ * Usage: gulp demo-prod
+ *        gulp demo-prod --theme <theme-name>
+ */
+gulp.task('demo-prod', ['clean'], cb => {
+    configureProd(require('./config/webpack.dist.config'), paths.themes.dev, cb);
 });
 
+/**
+ * Description: Build the production site out as minified assets If no theme
+ * is specified, ALL themes are built.
+ *
+ * Usage: gulp prod
+ *        gulp prod --theme <theme-name>
+ */
 gulp.task('prod', ['clean'], (cb) => {
-    const config = require('./config/webpack.dist.config');
-
-    configureProd(config, paths.themes.prod, cb);
+    configureProd(require('./config/webpack.dist.config'), paths.themes.prod, cb);
 });
 
-// Create a prod task based on the theme name
+/**
+ * Description: Starts a development server with the specified theme. IF
+ * no theme is specified, the _base theme is used
+ *
+ * Usage: gulp dev
+ *        gulp dev --theme <theme-name>
+ */
 gulp.task('dev', () => {
     const config = require('./config/webpack.dev.config');
     const args = yargs.argv;
@@ -88,7 +145,7 @@ gulp.task('default', ['dev']);
 
 function getFolders(dir) {
     return fs.readdirSync(dir)
-        .filter((file) => {
+        .filter(file => {
             return fs.statSync(path.join(dir, file)).isDirectory();
         });
 }

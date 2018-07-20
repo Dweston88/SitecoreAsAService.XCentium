@@ -1,0 +1,148 @@
+@import "~@/sass/base";
+
+$c-main-nav-background: #fff !default;
+$c-main-nav-link-color: #000 !default;
+$c-main-nav-link-hover-color: $c-main-nav-link-color !default;
+$c-main-nav-link-padding: 10px !default;
+$c-main-nav-transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) all !default;
+
+/* ----------------------------------------------------------------------------
+*
+* Main Nav - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.c-main-nav {
+    background: $c-main-nav-background;
+
+    &__list {
+        @include reset-list();
+    }
+
+    &__link {
+        color: $c-main-nav-link-color;
+        padding: $c-main-nav-link-padding;
+        background: transparent;
+        border: none;
+        text-transform: uppercase;
+        line-height: 1;
+
+        &:hover,
+        &:active,
+        &:focus,
+        [aria-expanded=true] {
+            text-decoration: none;
+            color: $c-main-nav-link-hover-color;
+        }
+
+        .dropdown-arrow {
+            padding: 0 0 0 rem-calc(10);
+
+            &:before {
+                display: block;
+                transition: $c-main-nav-transition;
+            }
+        }
+
+        &[aria-expanded=true] .dropdown-arrow:before {
+            transform: rotate(180deg) translateY(2px);
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .c-main-nav {
+        &__link {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: rem-calc(20) rem-calc(15) rem-calc(15);
+        }
+
+        &__list {
+            border-top: 1px solid #e4e4e4;
+        }
+
+        &__item {
+            border-bottom: 1px solid #e4e4e4;
+        }
+    }
+}
+
+@include media-breakpoint-only(sm) {
+    .c-main-nav {
+        &__list {
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        &__item {
+            border-bottom: none;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .c-main-nav {
+        &__link {
+            display: block;
+            padding: rem-calc(20) rem-calc(30) rem-calc(15);
+            margin: 0;
+            border: none;
+            background: transparent;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: #000;
+            }
+        }
+
+        &__list {
+            display: flex;
+            width: 100%;
+            padding: 0;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    // Don't allow collapsing on desktop
+    .c-main-nav__wrapper.collapse {
+        display: block !important;
+    }
+}
+
+/* ----------------------------------------------------------------------------
+*
+* Nav Toggle - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.c-nav-toggle {
+    $this: &;
+
+    @include reset-button();
+    line-height: 0;
+    vertical-align: middle;
+
+    &__close-img {
+        display: none;
+    }
+
+    &[aria-expanded=true] {
+        #{$this}__close-img {
+            display: block;
+        }
+
+        #{$this}__open-img {
+            display: none;
+        }
+    }
+
+    img {
+        width: 26px;
+    }
+}

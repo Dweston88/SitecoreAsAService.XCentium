@@ -1,0 +1,142 @@
+<header class="l-header">
+    <div class="l-header__inner container container-fluid">
+        <div class="l-header__brand">
+            <a class="c-logo" href="/">
+                <img class="c-logo__img" src="assets/xc-logo-dark.svg" alt="XCentium Logo">
+            </a>
+        </div>
+
+        <div class="l-header__main">
+            <b-collapse class="c-main-nav__wrapper" id="main-nav">
+                <nav class="c-main-nav">
+                    <ul class="c-main-nav__list">
+                        <li class="c-main-nav__item">
+                            <!-- This is a mega nav example  -->
+                            <xc-nav-dropdown position="none" extra-classes="c-main-nav__link h-hover-line" :transition="true" :arrow="false" id="test-nav-dropdown">
+                                Work <i class="fas fa-chevron-down dropdown-arrow"></i>
+
+                                <template slot="dropdown">
+                                    <div class="c-mega-nav">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="c-mega-nav__section col-md">
+                                                    <div class="c-mega-nav__nav">
+                                                        <div class="c-mega-nav__section-header h-hover-line" id="technology">Technology</div>
+
+                                                        <ul class="c-mega-nav__list" aria-labelledby="technology">
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">CMS</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Commerce</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Managed Services</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">XDB</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Business Intelligence</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="c-mega-nav__section col-md">
+                                                    <div class="c-mega-nav__nav">
+                                                        <div class="c-mega-nav__section-header h-hover-line" id="creative">Creative</div>
+
+                                                        <ul class="c-mega-nav__list">
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Content Strategy</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">UX / Usability</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Visual Design</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Branding</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="c-mega-nav__section col-md">
+                                                    <div class="c-mega-nav__nav">
+                                                        <div class="c-mega-nav__section-header h-hover-line" id="rd">R &amp; D</div>
+
+                                                        <ul class="c-mega-nav__list">
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Vault</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Gigya Connector</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Xcore</a>
+                                                            </li>
+
+                                                            <li class="c-mega-nav__item">
+                                                                <a class="c-mega-nav__link h-hover-line" href="#">Xblog</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="c-mega-nav__close">
+                                                <b-btn-close class="c-mega-nav__close-button" @click="$root.$emit('xc::hide::dropdown', 'test-nav-dropdown')">×</b-btn-close>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </xc-nav-dropdown>
+                        </li>
+
+                        <li class="c-main-nav__item">
+                            <a class="c-main-nav__link h-hover-line" href="#">About</a>
+                        </li>
+
+                        <li class="c-main-nav__item">
+                            <a class="c-main-nav__link h-hover-line" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </b-collapse>
+        </div>
+
+        <div class="l-header__utility">
+            <nav class="c-icon-nav">
+                <ul class="c-icon-nav__list">
+                    <li class="c-icon-nav__item">
+                        <xc-inline-site-search form-action="#" input-name="query" search-icon="assets/glyphs/search.svg" placeholder="B2B, Commerce, etc.">
+                            <button class="c-icon-nav__link">
+                                <img src="assets/glyphs/search.svg" alt="Search">
+                            </button>
+                        </xc-inline-site-search>
+                    </li>
+
+                    <li class="c-icon-nav__item d-block d-sm-none">
+                        <button type="button" class="c-nav-toggle" v-b-toggle="'main-nav'">
+                            <span class="sr-only">Toggle navigation</span>
+                            <img class="c-nav-toggle__open-img" src="assets/menu-open.svg" />
+                            <img class="c-nav-toggle__close-img" src="assets/menu-close.svg" />
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

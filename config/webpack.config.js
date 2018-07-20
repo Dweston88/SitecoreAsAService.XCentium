@@ -14,12 +14,11 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js',
             demo: path.resolve('demo/'),
             src: path.resolve('src/'),
-            assets: path.resolve('src/app/assets'),
-            '@': path.resolve('src/app/')
+            assets: path.resolve('src/shared/assets'),
+            '@': path.resolve('src/shared/')
         },
         extensions: ['*', '.js', '.vue', '.json']
     },
-
     module: {
         rules: [
             {

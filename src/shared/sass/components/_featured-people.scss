@@ -1,0 +1,31 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Featured People - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.l-featured {
+    padding: 4rem 1rem;
+}
+
+.c-featured-image {
+    margin-bottom: 3rem;
+
+    img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .l-featured {
+        padding: 2rem 15px 2rem 15px;
+    }
+
+    .l-featured-col {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

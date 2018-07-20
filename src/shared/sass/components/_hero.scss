@@ -1,0 +1,77 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Hero - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$hero-margin: 0 0 rem-calc(40) 0 !default;
+$hero-content-padding: rem-calc(200) 0 0 0 !default;
+
+$hero-kicker-margin: 0 0 rem-calc(10) 0 !default;
+
+$hero-heading-color: $black !default;
+$hero-subheading-color: $black !default;
+$hero-subheading-margin: 0 0 rem-calc(24) 0;
+
+$hero-cta-margin: rem-calc(15) 0 0 0;
+
+.c-hero {
+    $this: &;
+
+    margin: $hero-margin;
+    position: relative;
+
+    &__content-container {
+        padding-bottom: rem-calc(60);
+    }
+
+    &__content {
+        padding: $hero-content-padding;
+        max-width: 700px;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__kicker {
+        margin: $hero-kicker-margin;
+    }
+
+    &__heading {
+        color: $hero-heading-color;
+    }
+
+    &__subheading {
+        color: $hero-subheading-color;
+        margin: $hero-subheading-margin;
+    }
+
+    &__media {
+        display: block;
+        width: 100%;
+        border: none;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__cta {
+        cursor: pointer;
+
+        margin: $hero-cta-margin;
+    }
+
+    // TODO: Create a separate content-scroll component
+    &__content-scroll {
+        position: relative;
+        bottom: 30px;
+        text-align: center;
+        top: 30px;
+        margin-top: 15px;
+        display: block;
+    }
+}

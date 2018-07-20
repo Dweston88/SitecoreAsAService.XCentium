@@ -11,9 +11,7 @@ const cssLoader = {
     }
 };
 
-config.entry.app = [
-    path.resolve(__dirname, '../demo/index.js')
-];
+config.entry.app = {};
 
 config.output = {
     filename: '[name].bundle.js',

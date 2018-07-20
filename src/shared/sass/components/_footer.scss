@@ -1,0 +1,109 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Footer - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+footer {
+    background: $gray-400;
+    padding: 3rem 0 0 0;
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-content-form {
+        padding: .5rem 0 rem-calc(25) 0;
+
+        input[type=text] {
+            margin: 0 1rem 0 0;
+            width: 256px;
+        }
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: rem-calc(25) 0;
+        
+        a {
+            padding: 0 rem-calc(25);
+            display: block;
+            color: $gray-800;
+            text-decoration: none;
+        }
+    }
+
+    .footer-text, .copyright {
+        font-size: 14px;
+    }
+
+    .footer-text {
+        max-width: 600px;
+        margin: 3rem auto rem-calc(25) auto;
+    }
+
+    .footer-logo {
+        img {
+            max-width: 135px;
+        }
+    }
+
+    .back-to-top {
+        padding: 0 rem-calc(20);
+        text-align: center;
+
+        a {
+            border-top: 1px solid $gray-700;
+            display: block;
+            padding: rem-calc(15) 0;
+            color: $gray-800;
+            text-decoration: none;
+            margin: 1rem 0 0 0;
+        }
+
+        img {
+            padding: 0 0 .5rem 0;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: rem-calc(15) 0;
+    align-items: center;
+
+    a {
+        background: $gray-700;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 rem-calc(15);
+    }
+
+    i {
+        color: $white;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    footer {
+        .footer-content-form{
+            input[type=text] {
+                margin: 0 0 rem-calc(15) 0;
+            }
+        }
+
+        .footer-nav{
+            display: block;
+        }
+    }
+}

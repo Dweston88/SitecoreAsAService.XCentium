@@ -1,0 +1,90 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Mega Nav - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.c-mega-nav {
+    &__link {
+        font-size: rem-calc(16);
+    }
+
+    &__section {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 0;
+            width: 100%;
+            background: $primary;
+            transition: all 0.2s ease-in-out;
+            z-index: 1;
+        }
+    }
+
+    &__section-header {
+        color: #888888;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .c-mega-nav {
+        &__section-header {
+            text-transform: uppercase;
+            border-bottom: 1px solid $light-grey;
+        }
+
+        .h-placeholder-image, .h-mask {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .c-mega-nav {
+        &__link {
+            color: $white;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $white;
+
+                &.h-hover-line:before {
+                    width: rem-calc(40);
+                }
+            }
+        }
+
+        &__section-header {
+            color: $white;
+            font-weight: bold;
+        }
+
+        &__section {
+            &:hover,
+            &:active,
+            &:focus {
+                &:before {
+                    height: rem-calc(5);
+                }
+
+                .c-mega-nav {
+                    &__section-header {
+                        &.h-hover-line:before {
+                            width: rem-calc(40);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__close-button, &__close-button.close {
+            color: #888888;
+        }
+    }
+}

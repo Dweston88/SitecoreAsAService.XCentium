@@ -1,0 +1,73 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Promo - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$l-promo-column-width-md: 50% !default;
+$l-promo-column-width-lg: 33.3333% !default;
+
+$c-promo-text-color: $white !default;
+
+@include media-breakpoint-up(sm) {
+    .l-promo {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > * {
+            flex: 0 0 $l-promo-column-width-md;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .l-promo {
+        & > * {
+            flex: 0 0 $l-promo-column-width-lg;
+        }
+    }
+}
+
+$c-promo-content-padding: rem-calc(25) rem-calc(30);
+
+.c-promo {
+    $this: &;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: $c-promo-text-color;
+
+    &__content {
+        position: absolute;
+        padding: $c-promo-content-padding;
+        bottom: 0;
+        max-height: 100%;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        &.center {
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .icon {
+                margin: 0 0 rem-calc(15) 0;
+            }
+        }
+    }
+
+    @at-root a#{$this} {
+        &:hover, &:focus {
+            color: $c-promo-text-color;
+        }
+    }
+}

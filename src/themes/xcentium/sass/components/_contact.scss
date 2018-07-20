@@ -1,0 +1,23 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Contact - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.l-contact-form{
+    textarea{
+        min-height: 11rem;
+    }
+}
+
+.l-contact-submit{
+    input{
+        max-width: 45%;
+    }
+}
+
+.c-contact-i{
+    color: $primary;
+}

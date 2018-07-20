@@ -1,0 +1,44 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Fifty Fifty Image - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.l-fifty {
+    .l-fifty-text {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+
+        &.right {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        &.center {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .l-fifty-image {
+        height: 100%;
+    }
+
+    .l-fifty-image-wrapper {
+        height: 100%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .l-fifty {
+        .l-fifty-text {
+            padding: 2rem;
+        }
+    }
+}

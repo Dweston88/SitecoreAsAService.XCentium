@@ -1,0 +1,90 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Video Promo - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+// TODO: This needs to be renamed to .c-video-promo - Requires cshtml update
+.c-hero-full {
+    $this: &;
+
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    overflow: hidden;
+
+    &__text {
+        @include reset-button();
+
+        position: absolute;
+        padding: 3rem;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &:before {
+        height: 300px;
+        content: '';
+        display: block;
+    }
+
+    &__media {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+}
+
+// TODO: .h-video-play needs to be removed in the view, not overwritten in CSS
+.video-alt {
+    .h-video-play {
+        &:after {
+            display: none;
+        }
+    }
+
+    .video-play {
+        position: relative;
+        height: auto;
+        width: auto;
+        opacity: 1;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .c-hero-full {
+        min-height: 400px;
+
+        &:before {
+            height: 400px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .c-hero-full {
+        min-height: 500px;
+
+        &:before {
+            height: 500px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .video-alt{
+        .video-play{
+            height: 75px;
+            width: 75px;
+        }
+    }
+}

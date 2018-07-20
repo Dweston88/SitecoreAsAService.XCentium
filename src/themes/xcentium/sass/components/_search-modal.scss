@@ -1,0 +1,33 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Search Modal - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.c-site-search-modal {
+    &__heading {
+        font-weight: 400;
+        margin-bottom: rem-calc(10);
+        color: $white;
+    }
+
+    .close {
+        color: $white;
+    }
+
+    &__search {
+        input {
+            border: none;
+            padding: 1rem;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    &__search-submit {
+        padding: 0 3rem;
+        font-size: 1.2rem;
+    }
+}

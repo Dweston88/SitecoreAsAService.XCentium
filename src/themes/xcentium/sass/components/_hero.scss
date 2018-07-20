@@ -1,0 +1,50 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Footer - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+//TODO: Refactor text-center - requires cshtml update
+.c-hero-center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .h-line-mark{
+        &:before{
+            margin: 0px auto 5px auto;
+        }
+    }
+}
+
+// TODO: Refactor to text-right - requies cshtml update
+.c-hero-right{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    .h-line-mark{
+        position: relative;
+        
+        &:before{
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+    }
+}
+
+.c-hero {
+    $this: &;
+
+    &__heading {
+        line-height: 1.35;
+        letter-spacing: 1px;
+    }
+
+    &__subheading {
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,122 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Search Modal - Shared Theme
+*
+* ---------------------------------------------------------------------------- */
+
+$c-site-search-modal-background: $white !default;
+$c-site-search-modal-opacity: 0.9 !default;
+$c-site-search-modal-width: 770px !default;
+$c-site-search-modal-padding: rem-calc(130) 0 rem-calc(70) !default;
+$c-site-search-modal-button-background: $primary !default;
+$c-site-search-modal-button-color: $white !default;
+$c-site-search-modal-input-placholder-color: $gray-600 !default;
+
+.c-site-search-modal {
+    .modal-backdrop {
+        background: $c-site-search-modal-background;
+
+        &.show {
+            opacity: $c-site-search-modal-opacity;
+        }
+    }
+
+    .modal-dialog {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .modal-header {
+        border: none;
+        padding: 0;
+    }
+
+    .modal-body {
+        width: $c-site-search-modal-width;
+        max-width: 90%;
+        margin: 0 auto;
+        position: static;
+    }
+
+    .modal-content {
+        padding: $c-site-search-modal-padding;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+        opacity: 1;
+        font-size: rem-calc(40);
+        font-weight: 300;
+        padding: 0;
+        line-height: 1rem;
+        background: transparent;
+        border: none;
+        text-shadow: none;
+
+        &:hover, &:active, &:focus {
+            background: transparent;
+            border: none; 
+        }
+    }
+
+    &__link {
+        @include reset-button();
+    }
+
+    &__search {
+        position: relative;
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            flex: 1;
+            border-radius: 0;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__search-submit {
+        @include reset-button();
+
+        position: absolute;
+        right: 0;
+        height: 100%;
+        background: $c-site-search-modal-button-background;
+        color: $c-site-search-modal-button-color;
+        padding: 0 rem-calc(15);
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $c-site-search-modal-input-placholder-color;
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: $c-site-search-modal-input-placholder-color;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+        color: $c-site-search-modal-input-placholder-color;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: $c-site-search-modal-input-placholder-color;
+    }
+}

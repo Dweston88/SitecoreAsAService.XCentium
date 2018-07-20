@@ -1,0 +1,19 @@
+// Customized Bootstrap styling
+$fa-font-path: 'https://use.fontawesome.com/releases/v5.1.0/webfonts/';
+
+// Load all shared functions, and mixins 
+@import "../../shared/sass/base";
+
+// Load all of the bootstrap styles
+@import "../../shared/sass/bootstrap/bootstrap";
+
+// Load other required 3rd party libraries
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/fa-solid";
+@import "~@fortawesome/fontawesome-free/scss/fa-brands";
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+// Base Styling
+@import "../../shared/sass/utilities/utilities";
+@import "../../shared/sass/layouts/layouts";
+@import "../../shared/sass/components/components";

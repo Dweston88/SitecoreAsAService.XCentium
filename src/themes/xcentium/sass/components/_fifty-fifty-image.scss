@@ -1,0 +1,29 @@
+@import "~@/sass/base";
+
+/* ----------------------------------------------------------------------------
+*
+* Fifty Fifty Image - XC Theme
+*
+* ---------------------------------------------------------------------------- */
+
+.l-fifty{
+    .l-fifty-text {
+        &.right{
+            .h-line-mark{
+                position: relative;
+                
+                &:before{
+                    position: absolute;
+                    right: 0;
+                    top: -5px;
+                }
+            }
+        }
+
+        &.center{
+            .h-line-mark:before{
+                margin: 0px auto 5px auto;
+            }
+        }
+    }
+}

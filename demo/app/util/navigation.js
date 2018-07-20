@@ -18,3 +18,11 @@ export function CreateDynamicNavigation(routes) {
 
     return routes;
 }
+
+export function OverrideChildPage(routes, name, component) {
+    let childPage = routes[0].children.find(component => component.name === name);
+
+    if(typeof childPage !== 'undefined') {
+        childPage.component = component;
+    }
+}

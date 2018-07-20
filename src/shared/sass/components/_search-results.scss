@@ -1,0 +1,63 @@
+@import "~@/sass/base";
+
+.c-results {
+    &__facet__group{
+        border-bottom: 1px solid $primary-color;
+        margin-bottom: rem-calc(20);
+    }
+
+    &__facet__group__title {
+        cursor: pointer;
+        margin-bottom: rem-calc(20);
+
+        .toggler {
+            float: right;
+
+            .fa-plus {
+                display: none;
+            }
+
+        }
+
+        &.collapsed {
+            .toggler {    
+                .fa-plus {
+                    display: block;
+                }
+
+                .fa-minus {
+                    display: none;
+                }
+    
+            }
+        }
+    }
+
+    &__facet__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__facet__item{
+        margin-bottom: rem-calc(20);
+    }
+
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item{
+        padding: rem-calc(20);
+        border: 1px solid $primary-color;
+        margin-bottom: rem-calc(20);
+    }
+
+    &__sort {
+        label {
+            margin-right: 15px;
+        }
+    }
+}

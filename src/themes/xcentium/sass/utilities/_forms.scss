@@ -1,0 +1,54 @@
+@import "~@/sass/base";
+
+
+input[type=text], textarea {
+    border-radius: 0;
+    background-color: #fff;
+    height: 60px;
+}
+
+select.form-control {
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.custom-checkbox {
+    &.custom-control{
+        padding-left: 0;
+    }
+}
+
+.custom-checkbox {
+    .custom-control{
+        &-label {
+            padding-top: .5rem;
+            padding-left: 2.5rem;
+
+            &:before {
+                border: 1px solid #8399A8;
+                background-color: #FFFFFF;
+                border-radius: 0;
+                height: 30px;
+                width: 30px;
+                left: 0;
+            }
+
+            &:after {
+            }
+        }
+        
+        &-input:checked ~ .custom-control-label::after {
+            content: "\f00c";
+            background-image: none;
+            color: $primary-color;
+            font-family: 'Font Awesome 5 Free';
+            font-size: 22px;
+            left: 4px;
+            top: 2px;
+        }
+
+        &-input:checked ~ .custom-control-label::before {
+            background-color: #FFFFFF;
+        }
+    }
+}

@@ -23,10 +23,6 @@
 }
 
 // Needs to be updated using bootstrap variables
-input[type=text], textarea {
-    padding: 6px 15px;
-    border: 1px solid $primary; 
-}
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $medium-grey;

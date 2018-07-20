@@ -1,0 +1,29 @@
+@import "~@/sass/base";
+
+.c-results {
+    background-color: #fafafa;
+
+    .search-group {
+        margin-top: 3rem;
+        box-shadow: 0px 8px 24px -14px rgba(0,0,0,0.75);
+    }
+
+    &__facet__group{
+        border-bottom: 1px solid $light-grey-alt;
+
+        .toggler {
+            color: $light-grey-alt;
+        }
+    }
+
+    &__item{
+        background-color: $white;
+        border-color: $white;
+        box-shadow: 0px 0px 19px -4px rgba(186,186,186,1);
+    }
+
+    &__item__link {
+        color: $secondary-color;
+        font-weight: 800;
+    }
+}

@@ -13,6 +13,7 @@ import Tiles from '../../pages/components/tiles.vue';
 import FeaturedPeople from '../../pages/components/featured-people.vue';
 import Contact from '../../pages/components/contact.vue';
 import BlogContent from '../../pages/components/blog-content.vue';
+import SearchResults from '../../pages/components/search-results.vue';
 
 const ComponentPages = CreateDynamicNavigation([
     {
@@ -88,6 +89,11 @@ const ComponentPages = CreateDynamicNavigation([
                 path: 'blog-content',
                 name: 'Blog Content',
                 component: BlogContent
+            },
+            {
+                path: 'search-results',
+                name: 'Search Results',
+                component: SearchResults
             }
         ]
     }

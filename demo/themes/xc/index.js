@@ -19,4 +19,4 @@ import Navbar from './pages/components/navbar.vue';
 OverrideChildPage(ComponentPages, 'Tiles', Tiles);
 OverrideChildPage(ComponentPages, 'Navbar', Navbar);
 
-initDemo([].concat(HomePages, ComponentPages, LayoutPages));
+initDemo('XCentium Theme', [].concat(HomePages, ComponentPages, LayoutPages));

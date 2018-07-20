@@ -9,7 +9,7 @@
 
             <b-navbar-toggle class="c-sidebar-nav__toggle d-none d-md-block mr-3" target="sidebar-collapse-desktop"></b-navbar-toggle>
 
-            <b-navbar-brand v-bind:to="'/'">Component Library</b-navbar-brand>
+            <b-navbar-brand v-bind:to="'/'">{{ $themeName }}</b-navbar-brand>
 
             <b-collapse is-nav id="nav_collapse" class="c-navbar__container">
                 <b-navbar-nav class="c-navbar">

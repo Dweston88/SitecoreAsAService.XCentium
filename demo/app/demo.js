@@ -5,7 +5,10 @@ import VueRouter from 'vue-router';
 
 import App from 'demo/app/app.vue';
 
-export default function demo(routes) {
+export default function demo(themeName = '', routes) {
+    Vue.prototype.$themeName = themeName;
+    document.title = themeName;
+
     Vue.use(VueRouter);
 
     const router = new VueRouter({

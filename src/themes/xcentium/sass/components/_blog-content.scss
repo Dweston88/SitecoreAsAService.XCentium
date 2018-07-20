@@ -13,114 +13,85 @@
 
 .l-blog-tile{
     margin: 2rem 0;
+    padding: 2rem 0;
 
-    a{
+    a {
         color: $secondary-color;
         font-weight: 700;
     }
 
-    &.side-tile{
+    &.side-tile {
         padding: 2.5rem 1.5rem;
     }
 
-    h2{
-        letter-spacing: .1rem; 
-        line-height: 3.5rem;   
+    h2 {
+        letter-spacing: .1rem;
+        line-height: 1.3;
     }
 
-    .c-blog-content-top{
+    .c-blog-content-top {
         display: flex;
         text-align: center;
         justify-content: center;
         flex-direction: column;
-        padding: 2rem;
+        padding: 0 2rem;
     }
 
-    .c-author-divider{
+    .c-author-divider {
         width: 1px;
         height: 20px;
         background: $dark-grey;
     }
 
-    .c-blog-content-center{
-        padding: 2rem;
+    .c-blog-content-center {
+        padding: 0 2rem;
     }
 
-    .c-blog-content-bottom{
-        padding: 2rem;
+    .c-blog-content-bottom {
+        padding: 0 2rem;
 
-        p{
+        p {
             font-weight: 700;
             margin: 0 1rem 0 0;
         }
     }
 
-    .c-author-image{
-        img{
+    .c-author-image {
+        img {
             border-radius: 50%;
             width: 80px;
             height: 80px;
             margin: 1.5rem 0 1rem 0;
         }
-        
     }
 
     .social {
-        justify-content: flex-end;
-        padding: 0px;
-        margin: 0px;
-
-        a {
-            width: 20px;
-            height: 20px;
-            margin: 0 .3rem
-        }
-
-        i{
+        i {
             font-size: .7rem;
         }
     }
-
-    .c-tag-link{
-        margin: 0 .5rem 0 0;
-    }
 }
 
-.l-blog-side-link{
-    padding: 0 0 2.5rem 0;
-
-    a{
+.l-blog-side-link {
+    a {
         display: block;
         color: $dark-grey-alt;
-        padding: 0 0 1.5rem 0;
     }
 
-    a:hover{
+    a:hover {
         color: $secondary-color;
         text-decoration: none;
     }
 
-    .h3{
-        padding-bottom: 1.5rem;
-    }
-
-    .c-show-more{
+    .c-show-more {
         color: $secondary-color;
+        margin: 0;
     }
 }
 
-.l-subscribe{
-    input{
+.l-subscribe {
+    input {
         width: 100%;
         margin: 1.5rem 0 0 0;
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .l-blog-tile{
-        .social {
-            justify-content: flex-start;
-            padding: 1rem 0 0 0;
-        }
     }
 }

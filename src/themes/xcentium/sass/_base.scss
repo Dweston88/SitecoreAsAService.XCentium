@@ -2,6 +2,9 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 
+@import "~@/sass/functions";
+@import "~@/sass/mixins";
+
 // Load bootstrap variable overrides - these must be loaded before the base theme
 @import "./sass/bootstrap/variables/variables";
 

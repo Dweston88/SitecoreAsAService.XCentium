@@ -16,6 +16,8 @@
     overflow: hidden;
 
     &__text {
+        @include reset-button();
+
         position: absolute;
         padding: 3rem;
         bottom: 0;
